@@ -144,7 +144,7 @@ function M.set_colors()
   Group.link("StorageClass", groups.Type)
 
   Group.link("SpecialChar", groups.Special)
-  Group.new("SpecialKey", colors.base00, colors.base02, styles.bold)
+  -- Group.new("SpecialKey", colors.base00, colors.base02, styles.bold)
   Group.new("Text", colors.cyan)
   -- Group.link("String", groups.Text)
   Group.new('String', colors.indian_exp_green, colors.none, styles.none)
