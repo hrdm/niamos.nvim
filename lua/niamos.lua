@@ -666,6 +666,58 @@ function M.set_colors()
     Group.link("@lsp.type.number", groups.Number)
     Group.link("@lsp.type.regexp", groups.TSStringRegex)
     Group.link("@lsp.type.operator", groups.Operator)
+
+
+    -- lualine
+    Group.new('LuaLineNormalA', colors.white, colors.indian_blue, styles.bold)
+    Group.new('LuaLineNormalB', colors.indian_light_black, colors.indian_exp_grey)
+    Group.new('LuaLineNormalC', colors.indian_blue, colors.none)
+    Group.new('LuaLineNormalY', colors.indian_light_black, colors.indian_exp_grey)
+
+    Group.new('LuaLineCommandA', colors.white, colors.indian_red, styles.bold)
+    Group.new('LuaLineInsertA', colors.white, colors.indian_green, styles.bold)
+    Group.new('LuaLineVisualA', colors.white, colors.indian_red, styles.bold)
+    Group.new('LuaLineReplaceA', colors.white, colors.indian_red, styles.bold)
+
+    Group.new('LuaLineInactiveA', colors.white, colors.indian_exp_grey, styles.bold)
+    Group.new('LuaLineInactiveB', colors.indian_exp_grey, colors.none)
+    Group.new('LuaLineInactiveC', colors.indian_exp_grey, colors.none)
+    Group.new('LuaLineInactiveY', colors.indian_exp_grey, colors.none)
+
+    Group.new('LuaLineBufferActive', colors.indian_light_green, colors.none, styles.none)
+    Group.new('LuaLineBufferInactive', colors.indian_grey, colors.none, styles.none)
+
+    Group.new('lualine_x_diagnostics_info_terminal', colors.indian_exp_blue, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_info_inactive', colors.indian_exp_blue, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_info_replace', colors.indian_exp_blue, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_info_command', colors.indian_exp_blue, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_info_visual', colors.indian_exp_blue, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_info_normal', colors.indian_exp_blue, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_info_insert', colors.indian_exp_blue, colors.none, styles.none)
+
+    Group.new('lualine_x_diagnostics_error_terminal', colors.indian_red, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_error_inactive', colors.indian_red, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_error_replace', colors.indian_red, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_error_command', colors.indian_red, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_error_visual', colors.indian_red, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_error_normal', colors.indian_red, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_error_insert', colors.indian_red, colors.none, styles.none)
+
+    Group.new('lualine_x_diagnostics_warn_terminal', colors.indian_yellow, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_warn_inactive', colors.indian_yellow, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_warn_replace', colors.indian_yellow, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_warn_command', colors.indian_yellow, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_warn_visual', colors.indian_yellow, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_warn_normal', colors.indian_yellow, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_warn_insert', colors.indian_yellow, colors.none, styles.none)
+
+    Group.new('lualine_x_diagnostics_hint_terminal', colors.indian_green, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_hint_inactive', colors.indian_green, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_hint_replace', colors.indian_green, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_hint_command', colors.indian_green, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_hint_visual', colors.indian_green, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_hint_normal', colors.indian_green, colors.none, styles.none)
+    Group.new('lualine_x_diagnostics_hint_insert', colors.indian_green, colors.none, styles.none)
   end
 
   function M.translate(group)
