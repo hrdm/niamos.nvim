@@ -90,7 +90,7 @@ function M.set_colors()
 	-- Group.new("Normal", colors.base0, bg_color)
 	Group.new("Normal", colors.Normal:light(), colors.none, styles.none)
 	-- Group.new("NormalFloat", colors.base0, not config.background_set and Color.none or colors.base02)
-	Group.new("NormalFloat", colors.none, colors.indian_grey:light():light(), styles.None)
+	Group.new("NormalFloat", colors.none, colors.none, styles.None)
 	-- normal non-current text
 	Group.new("NormalNC", colors.base0:dark(), bg_color)
 
@@ -753,6 +753,7 @@ function M.set_colors()
 		Group.new("lualine_x_diagnostics_hint_insert", colors.indian_green, colors.none, styles.none)
 
 		Group.new("PmenuKind", colors.none, colors.style, styles.none)
+		Group.new("PmenuExtra", colors.none, colors.style, styles.none)
 	end
 
 	function M.translate(group)
