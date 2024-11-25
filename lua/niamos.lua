@@ -217,8 +217,8 @@ function M.set_colors()
 
 	-- be nice for this float border to be cyan if active
 	Group.new("FloatBorder", colors.base02)
-	Group.new("FloatShadow", colors.none, colors.indian_light_grey)
-	Group.new("FloatShadowThrough", colors.none, colors.indian_light_grey)
+	-- Group.new("FloatShadow", colors.none, colors.indian_light_grey)
+	-- Group.new("FloatShadowThrough", colors.none, colors.indian_light_grey)
 
 	-- Group.new("TabLine", colors.base0, colors.base02, styles.NONE, colors.base0)
 	-- Group.new("TabLineFill", colors.base0, colors.base02)
@@ -751,6 +751,8 @@ function M.set_colors()
 		Group.new("lualine_x_diagnostics_hint_visual", colors.indian_green, colors.none, styles.none)
 		Group.new("lualine_x_diagnostics_hint_normal", colors.indian_green, colors.none, styles.none)
 		Group.new("lualine_x_diagnostics_hint_insert", colors.indian_green, colors.none, styles.none)
+
+		Group.new("PmenuKind", colors.none, colors.style, styles.none)
 	end
 
 	function M.translate(group)
