@@ -752,8 +752,8 @@ function M.set_colors()
 		Group.new("lualine_x_diagnostics_hint_normal", colors.indian_green, colors.none, styles.none)
 		Group.new("lualine_x_diagnostics_hint_insert", colors.indian_green, colors.none, styles.none)
 
-		Group.new("PmenuKind", colors.none, colors.style, styles.none)
-		Group.new("PmenuExtra", colors.none, colors.style, styles.none)
+		-- Group.new("PmenuKind", colors.none, colors.style, styles.none)
+		-- Group.new("PmenuExtra", colors.none, colors.style, styles.none)
 	end
 
 	function M.translate(group)
