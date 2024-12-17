@@ -75,6 +75,7 @@ function M.set_colors()
 	Color.new("indian_light_cherry", "#FF5580")
 	Color.new("apple_dark_3", "#212124")
 	Color.new("twiter_light_", "#f3f4f6")
+	Color.new("indian_dark_green_2", "#589797")
 
 	Group.new("Error", colors.red)
 	Group.new("Warning", colors.yellow)
@@ -754,7 +755,7 @@ function M.set_colors()
 
 		-- Group.new("PmenuKind", colors.none, colors.style, styles.none)
 		-- Group.new("PmenuExtra", colors.none, colors.style, styles.none)
-		Group.new("IblScope", colors.indian_dark_green, colors.none, styles.none)
+		Group.new("IblScope", colors.indian_dark_green_2, colors.none, styles.none)
 		Group.new("IblIndent", colors.indian_exp_grey, colors.none, styles.none)
 	end
 
