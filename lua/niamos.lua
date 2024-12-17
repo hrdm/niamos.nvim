@@ -754,6 +754,8 @@ function M.set_colors()
 
 		-- Group.new("PmenuKind", colors.none, colors.style, styles.none)
 		-- Group.new("PmenuExtra", colors.none, colors.style, styles.none)
+		Group.new("IblScope", colors.indian_dark_green, colors.none, styles.none)
+		Group.new("IblIndent", colors.indian_exp_grey, colors.none, styles.none)
 	end
 
 	function M.translate(group)
