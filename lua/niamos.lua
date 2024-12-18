@@ -217,7 +217,7 @@ function M.set_colors()
 	Group.new("PmenuThumb", colors.none, colors.indian_grey:dark(), styles.None)
 
 	-- be nice for this float border to be cyan if active
-	Group.new("FloatBorder", colors.base02)
+	Group.new("FloatBorder", colors.base02, colors.none)
 	-- Group.new("FloatShadow", colors.none, colors.indian_light_grey)
 	-- Group.new("FloatShadowThrough", colors.none, colors.indian_light_grey)
 
@@ -776,8 +776,8 @@ function M.set_colors()
 		Group.new("SnacksDashboardKey", colors.indian_grey, colors.none, styles.none)
 		-- saga
 		-- Group.new("HoverNormal", colors.indian_dark_orange, colors.none, styles.none)
-		Group.new("LspReferenceText", colors.indian_dark_orange, colors.none, styles.none)
-		Group.new("LspReferenceRead", colors.indian_dark_orange, colors.none, styles.none)
+		-- Group.new("LspReferenceText", colors.indian_dark_orange, colors.none, styles.none)
+		-- Group.new("LspReferenceRead", colors.indian_dark_orange, colors.none, styles.none)
 		-- Group.new("TroubleNormal", colors.indian_dark_orange, colors.none, styles.none)
 	end
 
