@@ -218,7 +218,7 @@ function M.set_colors()
 	Group.new("PmenuThumb", colors.none, colors.indian_grey:dark(), styles.None)
 
 	-- be nice for this float border to be cyan if active
-	Group.new("FloatBorder", colors.base02, colors.none)
+	Group.new("FloatBorder", colors.indian_dark_orange, colors.none)
 	-- Group.new("FloatShadow", colors.none, colors.indian_light_grey)
 	-- Group.new("FloatShadowThrough", colors.none, colors.indian_light_grey)
 
