@@ -769,7 +769,10 @@ function M.set_colors()
 		Group.new("AlphaShortcut", colors.indian_exp_grey_, colors.none, styles.none)
 		Group.new("AlphaFooter", colors.indian_red, colors.none, styles.none)
 		-- snacks
-		Group.new("SnacksDashboardHeader", colors.indian_light_green, colors.none, styles.none)
+		Group.new("SnacksDashboardHeader", colors.indian_light_black, colors.none, styles.none)
+		Group.new("SnacksDashboardIcon", colors.indian_light_cherry, colors.none, styles.none)
+		Group.new("SnacksDashboardDesc", colors.indian_light_orange, colors.none, styles.none)
+		Group.new("SnacksDashboardKey", colors.indian_exp_blue, colors.none, styles.none)
 	end
 
 	function M.translate(group)
