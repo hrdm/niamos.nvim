@@ -777,6 +777,7 @@ function M.set_colors()
 		-- saga
 		-- Group.new("HoverNormal", colors.indian_dark_orange, colors.none, styles.none)
 		Group.new("HoverBorder", colors.indian_dark_orange, colors.none, styles.none)
+		Group.new("TroubleNormal", colors.indian_dark_orange, colors.none, styles.none)
 	end
 
 	function M.translate(group)
