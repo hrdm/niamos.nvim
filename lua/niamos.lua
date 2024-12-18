@@ -762,6 +762,8 @@ function M.set_colors()
 		Group.new("NoiceCmdlineIconSearch", colors.white, colors.indian_red, styles.none)
 		Group.new("NoiceCmdlineIconCmdline", colors.white, colors.indian_green, styles.none)
 		Group.new("NoiceCursor", colors.none, colors.indian_dark_green_3, styles.none)
+		Group.new("AlphaHeader", colors.indian_indian_light_green, colors.none, styles.none)
+		Group.new("AlphaButtons", colors.indian_dark_orange, colors.none, styles.none)
 		Group.new("AlphaFooter", colors.indian_red, colors.none, styles.none)
 	end
 
