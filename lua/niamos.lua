@@ -774,6 +774,8 @@ function M.set_colors()
 		Group.new("SnacksDashboardIcon", colors.indian_exp_green, colors.none, styles.none)
 		Group.new("SnacksDashboardDesc", colors.indian_blue:light(), colors.none, styles.none)
 		Group.new("SnacksDashboardKey", colors.indian_grey, colors.none, styles.none)
+		-- saga
+		Group.new("lspsagahoverborder", colors.indian_dark_orange, colors.none, styles.none)
 	end
 
 	function M.translate(group)
