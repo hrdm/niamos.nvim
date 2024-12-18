@@ -76,7 +76,7 @@ function M.set_colors()
 	Color.new("apple_dark_3", "#212124")
 	Color.new("twiter_light_", "#f3f4f6")
 	Color.new("indian_dark_green_2", "#589797")
-
+	Color.new("indian_dark_green_3", "#2aa198")
 	Group.new("Error", colors.red)
 	Group.new("Warning", colors.yellow)
 	Group.new("Information", colors.blue)
@@ -757,6 +757,11 @@ function M.set_colors()
 		-- Group.new("PmenuExtra", colors.none, colors.style, styles.none)
 		Group.new("IblScope", colors.indian_dark_green_2, colors.none, styles.none)
 		Group.new("IblIndent", colors.indian_exp_grey, colors.none, styles.none)
+		-- noice
+		Group.new("NoiceCmdlineIconLua", colors.white, colors.indian_blue:light(), styles.none)
+		Group.new("NoiceCmdlineIconSearch", colors.white, colors.indian_red, styles.none)
+		Group.new("NoiceCmdlineIconCmdline", colors.white, colors.indian_green, styles.none)
+		Group.new("NoiceCursor", colors.none, colors.indian_dark_green_3, styles.none)
 	end
 
 	function M.translate(group)
