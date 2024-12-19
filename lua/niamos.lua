@@ -274,32 +274,7 @@ function M.set_colors()
 
   Group.new("GitSignsStagedChange", colors.indian_light_cherry, colors.none, styles.bold)
   Group.new("GitSignsStagedAdd", colors.indian_light_cherry, colors.none, styles.bold)
-
-  -- Group.new("GitSignsStagedDelete", colors.indian_light_cherry, colors.none, styles.bold)
-  -- Group.new(
-  -- 	"GitSignsStagedAddCul",
-  -- 	colors.indian_light_cherry,
-  -- 	colors.indian_light_cherry:light():light():light(),
-  -- 	styles.none
-  -- )
-  -- Group.new(
-  -- 	"GitSignsStagedAddNr",
-  -- 	colors.indian_light_cherry,
-  -- 	colors.indian_light_cherry:light():light():light(),
-  -- 	styles.none
-  -- )
-  -- Group.new(
-  -- 	"GitSignsStagedAddln",
-  -- 	colors.indian_light_cherry,
-  -- 	colors.indian_light_cherry:light():light():light(),
-  -- 	styles.none
-  -- )
-  -- Group.new(
-  -- 	"GitSignsStagedAdd",
-  -- 	colors.indian_light_cherry,
-  -- 	colors.indian_light_cherry:light():light():light(),
-  -- 	styles.none
-  -- )
+  Group.new("GitSignsStagedDelete", colors.indian_red, colors.none, styles.bold)
 
   -- vim highlighting
   Group.link("vimVar", groups.Identifier)
@@ -776,11 +751,6 @@ function M.set_colors()
     Group.new("SnacksDashboardIcon", colors.indian_green:dark(), colors.none, styles.none)
     Group.new("SnacksDashboardDesc", colors.indian_blue:light(), colors.none, styles.none)
     Group.new("SnacksDashboardKey", colors.indian_grey, colors.none, styles.none)
-    -- saga
-    -- Group.new("HoverNormal", colors.indian_dark_orange, colors.none, styles.none)
-    -- Group.new("LspReferenceText", colors.indian_dark_orange, colors.none, styles.none)
-    -- Group.new("LspReferenceRead", colors.indian_dark_orange, colors.none, styles.none)
-    -- Group.new("TroubleNormal", colors.indian_dark_orange, colors.none, styles.none)
   end
 
   function M.translate(group)
