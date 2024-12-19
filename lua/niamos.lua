@@ -272,8 +272,8 @@ function M.set_colors()
   Group.new("DiagnosticERRORReverse", colors.white, colors.indian_red, styles.bold)
   Group.new("DiagnosticINFOReverse", colors.white, colors.indian_exp_blue, styles.bold)
 
-  Group.new("GitSignsStagedChangeLn", colors.indian_light_cherry, colors.none, styles.bold)
-  Group.new("GitSignsStagedChangeDeleteLn", colors.indian_light_cherry, colors.none, styles.bold)
+  Group.new("GitSignsStagedChange", colors.indian_light_cherry, colors.none, styles.bold)
+  Group.new("GitSignsStagedDelete", colors.indian_light_cherry, colors.none, styles.bold)
   -- Group.new(
   -- 	"GitSignsStagedAddCul",
   -- 	colors.indian_light_cherry,
