@@ -534,7 +534,7 @@ function M.set_colors()
     styles.none
   )
   Group.new("DiagnosticSignHint", colors.indian_green, colors.none, styles.bold)
-  Group.new("MsgSeparator", colors.indian_light_cherry, colors.none, styles.underline)
+  Group.new("MsgSeparator", colors.indian_exp_blue, colors.none, styles.underline)
   Group.new("DiagnosticUnderlineOk", colors.indian_light_cherry, colors.none, styles.underline)
   Group.new("DiagnosticUnderlineError", colors.indian_red, colors.none, styles.underline)
   Group.new("DiagnosticUnderlineWarn", colors.indian_yellow, colors.none, styles.underline)
