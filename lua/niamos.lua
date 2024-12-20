@@ -163,7 +163,7 @@ function M.set_colors()
   Group.new("ErrorMsg", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
   -- Group.new("ModeMsg", colors.indian_blue, colors.indian_blue:light():light():light(), styles.none)
   Group.new("MoreMsg", colors.indian_blue, colors.indian_blue:light():light():light():light(), styles.none)
-  Group.new("MsgArea", colors.indian_blue, colors.indian_blue:light():light():light():light(), styles.none)
+  Group.new("MsgArea", colors.indian_blue, colors.none, styles.none)
   -- Group.new("WarningMsg", colors.indian_dark_orange, colors.indian_dark_orange:light():light():light(), styles.none)
 
   -- Group.new("IncSearch", colors.orange, colors.none, styles.standout)
