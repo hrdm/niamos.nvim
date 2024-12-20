@@ -161,6 +161,7 @@ function M.set_colors()
   Group.new("Directory", colors.blue)
   -- Group.new("ErrorMsg", colors.red, colors.none, styles.reverse)
   Group.new("ErrorMsg", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
+  Group.new("ModeMsg", colors.indian_blue, colors.indian_blue:light():light():light(), styles.none)
 
   -- Group.new("IncSearch", colors.orange, colors.none, styles.standout)
   -- Group.new("Search", colors.yellow, colors.none, styles.reverse)
