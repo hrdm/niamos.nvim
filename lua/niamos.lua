@@ -341,7 +341,7 @@ function M.set_colors()
     colors.indian_green:light():light():light():light():light(),
     styles.None
   )
-  Group.new("CmpItemKindText", colors.base3, colors.none, styles.none)
+  Group.new("CmpItemKindText", colors.indian_dark_orange, colors.none, styles.none)
   Group.new("CmpItemKindMethod", colors.green, colors.none, styles.none)
   Group.new("CmpItemKindFunction", colors.blue, colors.none, styles.none)
   Group.new("CmpItemKindConstructor", colors.orange, colors.none, styles.none)
