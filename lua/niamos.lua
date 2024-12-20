@@ -334,8 +334,13 @@ function M.set_colors()
 
   Group.new("CmpItemKind", colors.green)
   Group.new("CmpItemMenu", groups.NormalNC)
-  -- Group.new('CmpItemAbbr', colors.base0, colors.none, styles.none)
-  -- Group.new('CmpItemAbbrMatch', colors.base0, colors.none, styles.none)
+  Group.new("CmpItemAbbr", colors.Normal, colors.none, styles.none)
+  Group.new(
+    "CmpItemAbbrMatch",
+    colors.indian_green,
+    colors.indian_green:light():light():light():light():light(),
+    styles.None
+  )
   Group.new("CmpItemKindText", colors.base3, colors.none, styles.none)
   Group.new("CmpItemKindMethod", colors.green, colors.none, styles.none)
   Group.new("CmpItemKindFunction", colors.blue, colors.none, styles.none)
