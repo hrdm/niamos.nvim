@@ -424,7 +424,14 @@ function M.set_colors()
   Group.new("DevIconPy", colors.indian_yellow, colors.none, styles.none)
   Group.new("DevIconLua", colors.indian_blue, colors.none, styles.none)
 
-  Group.new("TelescopeMatching", colors.orange, groups.Special, groups.Special, groups.Special)
+  Group.new("TelescopeMatching", colors.indian_red, colors.indian_red:light():light():light(), groups.none, groups.none)
+  Group.new(
+    "TelescopePreviewMatch",
+    colors.indian_green,
+    colors.indian_green:light():light():light():light():light(),
+    groups.none,
+    groups.none
+  )
   Group.new("TelescopeBorder", colors.base01) -- float border not quite dark enough, maybe that needs to change?
   Group.new("TelescopePromptBorder", colors.cyan) -- active border lighter for clarity
   Group.new("TelescopeTitle", groups.Normal) -- separate them from the border a little, but not make them pop
