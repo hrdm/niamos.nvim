@@ -769,6 +769,8 @@ function M.set_colors()
     Group.new("SnacksDashboardIcon", colors.indian_green:dark(), colors.none, styles.none)
     Group.new("SnacksDashboardDesc", colors.indian_blue:light(), colors.none, styles.none)
     Group.new("SnacksDashboardKey", colors.indian_grey, colors.none, styles.none)
+    -- bufferline
+    Group.new("BufferLineTabSelected", colors.indian_dark_orange, colors.none, styles.none)
   end
 
   function M.translate(group)
