@@ -429,8 +429,7 @@ function M.set_colors()
     "TelescopePreviewMatch",
     colors.indian_green,
     colors.indian_green:light():light():light():light():light(),
-    groups.none,
-    groups.none
+    styles.none
   )
   Group.new("TelescopeBorder", colors.base01) -- float border not quite dark enough, maybe that needs to change?
   Group.new("TelescopePromptBorder", colors.cyan) -- active border lighter for clarity
