@@ -424,7 +424,7 @@ function M.set_colors()
   Group.new("DevIconPy", colors.indian_yellow, colors.none, styles.none)
   Group.new("DevIconLua", colors.indian_blue, colors.none, styles.none)
 
-  Group.new("TelescopeMatching", colors.indian_red, colors.indian_red:light():light():light(), groups.none, groups.none)
+  Group.new("TelescopeMatching", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
   Group.new(
     "TelescopePreviewMatch",
     colors.indian_green,
