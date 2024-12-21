@@ -772,6 +772,10 @@ function M.set_colors()
     -- bufferline
     Group.new("bufferlineIndicatorSelected", colors.indian_dark_orange, colors.none, styles.none)
     Group.new("BufferLineSeparator", colors.indian_light_cherry, colors.none, styles.none)
+    Group.new("BufferlineIndicatorSelected", colors.indian_yellow, colors.none, styles.none)
+    Group.new("BufferLineTruncMarker", colors.white, colors.indian_light_cherry, styles.none)
+    Group.new("BufferLineModified", colors.indian_exp_green, colors.none, styles.none)
+    Group.new("BufferLineBufferSelected", colors.indian_light_cherry, colors.none, styles.bold)
   end
 
   function M.translate(group)
