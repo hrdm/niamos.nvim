@@ -750,8 +750,11 @@ function M.set_colors()
 
     -- Group.new("PmenuKind", colors.none, colors.style, styles.none)
     -- Group.new("PmenuExtra", colors.none, colors.style, styles.none)
+    -- indent plugin support
     Group.new("IblScope", colors.indian_dark_green_2, colors.none, styles.none)
     Group.new("IblIndent", colors.indian_exp_grey, colors.none, styles.none)
+    Group.new("SnacksIndent", colors.indian_exp_grey, colors.none, styles.none)
+
     -- noice
     Group.new("NoiceCmdlineIconLua", colors.white, colors.indian_blue:light(), styles.none)
     Group.new("NoiceCmdlineIconSearch", colors.white, colors.indian_red, styles.none)
