@@ -63,7 +63,7 @@ function M.set_colors()
   Color.new("indian_light_grey", "#f3f3f3")
   Color.new("indian_exp_grey", "#e4e4e4")
   Color.new("indian_blue", "#3d7da7")
-  Color.new("indian_green", "#3e9997")
+  Color.new("b_green", "#3e9997")
   Color.new("indian_light_green", "#12b19c")
   Color.new("indian_light", "#f8fdf8")
   Color.new("indian_light_red", "#ff9999")
@@ -161,7 +161,7 @@ function M.set_colors()
   Group.new("Folded", colors.indian_grey, colors.indian_grey:light():light(), styles.none)
   Group.new("FoldColumn", colors.indian_grey, colors.none, styles.bold)
 
-  Group.new("DiffAdd", colors.indian_green, colors.indian_green:light():light():light():light():light(), styles.none)
+  Group.new("DiffAdd", colors.b_green, colors.b_green:light():light():light():light():light(), styles.none)
   Group.new("DiffChange", colors.yellow, colors.yellow:light():light():light():light(), styles.none)
   Group.new("DiffDelete", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
   Group.new("DiffText", colors.indian_blue, colors.indian_blue:light():light():light():light(), styles.bold)
@@ -179,7 +179,7 @@ function M.set_colors()
 
   -- pum (popup menu)
   Group.new("Pmenu", colors.none, colors.indian_grey_02, styles.None)
-  Group.new("PmenuSel", colors.indian_green, colors.indian_green:light():light():light():light():light(), styles.None)
+  Group.new("PmenuSel", colors.b_green, colors.b_green:light():light():light():light():light(), styles.None)
   Group.new("PmenuThumb", colors.indian_exp_grey, colors.indian_grey, styles.None)
   -- Group.new("PmenuSbar", colors.none, colors.indian_grey:light():light(), styles.None)
 
@@ -287,12 +287,7 @@ function M.set_colors()
   Group.new("CmpItemKind", colors.green)
   Group.new("CmpItemMenu", groups.NormalNC)
   Group.new("CmpItemAbbr", colors.Normal, colors.none, styles.none)
-  Group.new(
-    "CmpItemAbbrMatch",
-    colors.indian_green,
-    colors.indian_green:light():light():light():light():light(),
-    styles.None
-  )
+  Group.new("CmpItemAbbrMatch", colors.b_green, colors.b_green:light():light():light():light():light(), styles.None)
   Group.new("CmpItemKindText", colors.indian_dark_orange, colors.none, styles.none)
   Group.new("CmpItemKindMethod", colors.green, colors.none, styles.none)
   Group.new("CmpItemKindFunction", colors.blue, colors.none, styles.none)
@@ -340,32 +335,27 @@ function M.set_colors()
 
   Group.new("LspFloatWinBorder", groups.LspSagaHoverBorder)
   Group.new("LspLinesDiagBorder", groups.LspSagaHoverBorder)
-  Group.new("LspSagaFinderSelection", colors.indian_green, colors.none, styles.bold)
+  Group.new("LspSagaFinderSelection", colors.b_green, colors.none, styles.bold)
   --Group.new('SagaShadow', colors.base02)
 
   Group.new("SagaNormal", colors.none, colors.none, styles.none)
   Group.new("SagaBorder", colors.indian_dark_orange, colors.none, styles.none)
   Group.new("SagaFolder", colors.indian_exp_blue, colors.none, styles.bold)
-  Group.new("SagaFolderName", colors.indian_green, colors.none, styles.bold)
+  Group.new("SagaFolderName", colors.b_green, colors.none, styles.bold)
   Group.new("SagaFileName", colors.indian_grey:dark(), colors.none, styles.bold)
   Group.new("SagaSep", colors.indian_red, colors.none, styles.bold)
-  Group.new("SagaWinbarSep", colors.indian_green, colors.none, styles.none)
+  Group.new("SagaWinbarSep", colors.b_green, colors.none, styles.none)
   Group.new("TargetFileName", colors.indian_grey:light(), colors.none, styles.bold)
-  Group.new(
-    "FinderParam",
-    colors.indian_green,
-    colors.indian_green:light():light():light():light():light(),
-    styles.none
-  )
+  Group.new("FinderParam", colors.b_green, colors.b_green:light():light():light():light():light(), styles.none)
   Group.new("FinderVirtText", colors.indian_red, colors.none, styles.none)
   Group.new("DefinitionsIcon", colors.indian_blue, colors.none, styles.none)
-  Group.new("Definitions", colors.indian_green, colors.none, styles.bold)
+  Group.new("Definitions", colors.b_green, colors.none, styles.bold)
   Group.new("DefinitionCount", colors.indian_red, colors.none, styles.none)
   Group.new("ReferencesIcon", colors.indian_blue, colors.none, styles.none)
-  Group.new("References", colors.indian_green, colors.none, styles.bold)
+  Group.new("References", colors.b_green, colors.none, styles.bold)
   Group.new("ReferencesCount", colors.indian_red, colors.none, styles.none)
   Group.new("ImplementsIcon", colors.indian_blue, colors.none, styles.none)
-  Group.new("Implements", colors.indian_green, colors.none, styles.bold)
+  Group.new("Implements", colors.b_green, colors.none, styles.bold)
   Group.new("ImplementsCount", colors.indian_red, colors.none, styles.none)
   Group.new("DefinitionBorder", colors.indian_red, colors.indian_red:light():light():light(), styles.bold)
 
@@ -375,8 +365,8 @@ function M.set_colors()
   Group.new("TelescopeMatching", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
   Group.new(
     "TelescopePreviewMatch",
-    colors.indian_green,
-    colors.indian_green:light():light():light():light():light(),
+    colors.b_green,
+    colors.b_green:light():light():light():light():light(),
     styles.none
   )
   Group.new("TelescopeBorder", colors.base01) -- float border not quite dark enough, maybe that needs to change?
@@ -385,7 +375,7 @@ function M.set_colors()
   Group.new("TelescopePromptPrefix", groups.Normal) -- default is groups.Identifier
   Group.link("TelescopeSelection", groups.CursorLine)
   Group.new("TelescopeSelectionCaret", colors.cyan)
-  Group.new("TelescopeResultsBorder", colors.indian_green, colors.none, styles.none)
+  Group.new("TelescopeResultsBorder", colors.b_green, colors.none, styles.none)
   Group.new("TelescopePreviewBorder", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
 
   Group.new("NeogitDiffAddHighlight", colors.green, colors.base02)
@@ -485,19 +475,14 @@ function M.set_colors()
     styles.none
   )
   Group.new("DiagnosticSignInfo", colors.indian_exp_blue, colors.none, styles.none)
-  Group.new(
-    "DiagnosticHint",
-    colors.indian_green,
-    colors.indian_green:light():light():light():light():light(),
-    styles.none
-  )
-  Group.new("DiagnosticSignHint", colors.indian_green, colors.none, styles.bold)
+  Group.new("DiagnosticHint", colors.b_green, colors.b_green:light():light():light():light():light(), styles.none)
+  Group.new("DiagnosticSignHint", colors.b_green, colors.none, styles.bold)
   Group.new("MsgSeparator", colors.indian_exp_green, colors.none, styles.underline)
   Group.new("DiagnosticUnderlineOk", colors.indian_light_cherry, colors.none, styles.underline)
   Group.new("DiagnosticUnderlineError", colors.indian_red, colors.none, styles.underline)
   Group.new("DiagnosticUnderlineWarn", colors.indian_yellow, colors.none, styles.underline)
   Group.new("DiagnosticUnderlineInfo", colors.indian_blue, colors.none, styles.underline)
-  Group.new("DiagnosticUnderlineHint", colors.indian_green, colors.none, styles.underline)
+  Group.new("DiagnosticUnderlineHint", colors.b_green, colors.none, styles.underline)
   Group.link("DiagnosticVirtualTextHint", groups.Comment)
   Group.link("DiagnosticTextWarn", groups.WarningMsg)
 
@@ -646,7 +631,7 @@ function M.set_colors()
     Group.new("LuaLineNormalY", colors.indian_light_black, colors.indian_exp_grey)
 
     Group.new("LuaLineCommandA", colors.white, colors.indian_red, styles.bold)
-    Group.new("LuaLineInsertA", colors.white, colors.indian_green, styles.bold)
+    Group.new("LuaLineInsertA", colors.white, colors.b_green, styles.bold)
     Group.new("LuaLineVisualA", colors.white, colors.indian_red, styles.bold)
     Group.new("LuaLineReplaceA", colors.white, colors.indian_red, styles.bold)
 
@@ -682,13 +667,13 @@ function M.set_colors()
     Group.new("lualine_x_diagnostics_warn_normal", colors.indian_yellow, colors.none, styles.none)
     Group.new("lualine_x_diagnostics_warn_insert", colors.indian_yellow, colors.none, styles.none)
 
-    Group.new("lualine_x_diagnostics_hint_terminal", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_inactive", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_replace", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_command", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_visual", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_normal", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_insert", colors.indian_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_terminal", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_inactive", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_replace", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_command", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_visual", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_normal", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_insert", colors.b_green, colors.none, styles.none)
 
     -- Group.new("PmenuKind", colors.none, colors.style, styles.none)
     -- Group.new("PmenuExtra", colors.none, colors.style, styles.none)
@@ -700,7 +685,7 @@ function M.set_colors()
     -- noice
     Group.new("NoiceCmdlineIconLua", colors.white, colors.indian_blue:light(), styles.none)
     Group.new("NoiceCmdlineIconSearch", colors.white, colors.indian_red, styles.none)
-    Group.new("NoiceCmdlineIconCmdline", colors.white, colors.indian_green, styles.none)
+    Group.new("NoiceCmdlineIconCmdline", colors.white, colors.b_green, styles.none)
     Group.new("NoiceCmdlineIconFilter", colors.white, colors.indian_dark_orange, styles.none)
     Group.new("NoiceCursor", colors.none, colors.indian_dark_green_3, styles.none)
     -- alpha
@@ -709,9 +694,9 @@ function M.set_colors()
     Group.new("AlphaShortcut", colors.indian_exp_grey_, colors.none, styles.none)
     Group.new("AlphaFooter", colors.indian_red, colors.none, styles.none)
     -- snacks
-    Group.new("SnacksDashboardHeader", colors.indian_green:dark(), colors.none, styles.bold)
-    Group.new("SnacksDashboardTitle", colors.indian_green, colors.none, styles.bold)
-    Group.new("SnacksDashboardIcon", colors.indian_green:dark(), colors.none, styles.none)
+    Group.new("SnacksDashboardHeader", colors.b_green:dark(), colors.none, styles.bold)
+    Group.new("SnacksDashboardTitle", colors.b_green, colors.none, styles.bold)
+    Group.new("SnacksDashboardIcon", colors.b_green:dark(), colors.none, styles.none)
     Group.new("SnacksDashboardDesc", colors.indian_blue:light(), colors.none, styles.none)
     Group.new("SnacksDashboardKey", colors.indian_grey, colors.none, styles.none)
     -- bufferline
@@ -727,14 +712,14 @@ function M.set_colors()
   Group.new("NoiceCmdlineIconHelp", colors.white, colors.indian_dark_orange, styles.none)
   Group.new(
     "NoiceFormatProgressDone",
-    colors.indian_green,
-    colors.indian_green:light():light():light():light():light(),
+    colors.b_green,
+    colors.b_green:light():light():light():light():light(),
     styles.None
   )
 
   -- snacks
-  Group.new("SnacksNotifierBorderInfo", colors.indian_green:light(), colors.none, styles.none)
-  Group.new("SnacksNotifierTitleInfo", colors.indian_green:light(), colors.none, styles.none)
+  Group.new("SnacksNotifierBorderInfo", colors.b_green:light(), colors.none, styles.none)
+  Group.new("SnacksNotifierTitleInfo", colors.b_green:light(), colors.none, styles.none)
 
   function M.translate(group)
     if fn.has("nvim-0.6.0") == 0 then
