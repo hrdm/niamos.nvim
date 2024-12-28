@@ -69,7 +69,7 @@ function M.set_colors()
   Color.new("indian_light_red", "#ff9999")
   Color.new("indian_dark_green", "#002b36")
   Color.new("indian_light_orange", "#ffbf7e")
-  Color.new("indian_dark_orange", "#ffaf5f")
+  Color.new("b_orange", "#ffaf5f")
   Color.new("indian_exp_blue", "#3cacce")
   Color.new("Normal", "#4e585a")
   Color.new("indian_exp_green", "#87c095")
@@ -184,7 +184,7 @@ function M.set_colors()
   -- Group.new("PmenuSbar", colors.none, colors.indian_grey:light():light(), styles.None)
 
   -- be nice for this float border to be cyan if active
-  Group.new("FloatBorder", colors.indian_dark_orange, colors.none)
+  Group.new("FloatBorder", colors.b_orange, colors.none)
   -- Group.new("FloatShadow", colors.none, colors.indian_light_grey)
   -- Group.new("FloatShadowThrough", colors.none, colors.indian_light_grey)
 
@@ -288,7 +288,7 @@ function M.set_colors()
   Group.new("CmpItemMenu", groups.NormalNC)
   Group.new("CmpItemAbbr", colors.Normal, colors.none, styles.none)
   Group.new("CmpItemAbbrMatch", colors.b_green, colors.b_green:light():light():light():light():light(), styles.None)
-  Group.new("CmpItemKindText", colors.indian_dark_orange, colors.none, styles.none)
+  Group.new("CmpItemKindText", colors.b_orange, colors.none, styles.none)
   Group.new("CmpItemKindMethod", colors.green, colors.none, styles.none)
   Group.new("CmpItemKindFunction", colors.blue, colors.none, styles.none)
   Group.new("CmpItemKindConstructor", colors.orange, colors.none, styles.none)
@@ -339,7 +339,7 @@ function M.set_colors()
   --Group.new('SagaShadow', colors.base02)
 
   Group.new("SagaNormal", colors.none, colors.none, styles.none)
-  Group.new("SagaBorder", colors.indian_dark_orange, colors.none, styles.none)
+  Group.new("SagaBorder", colors.b_orange, colors.none, styles.none)
   Group.new("SagaFolder", colors.indian_exp_blue, colors.none, styles.bold)
   Group.new("SagaFolderName", colors.b_green, colors.none, styles.bold)
   Group.new("SagaFileName", colors.indian_grey:dark(), colors.none, styles.bold)
@@ -686,11 +686,11 @@ function M.set_colors()
     Group.new("NoiceCmdlineIconLua", colors.white, colors.b_blue:light(), styles.none)
     Group.new("NoiceCmdlineIconSearch", colors.white, colors.b_red, styles.none)
     Group.new("NoiceCmdlineIconCmdline", colors.white, colors.b_green, styles.none)
-    Group.new("NoiceCmdlineIconFilter", colors.white, colors.indian_dark_orange, styles.none)
+    Group.new("NoiceCmdlineIconFilter", colors.white, colors.b_orange, styles.none)
     Group.new("NoiceCursor", colors.none, colors.indian_dark_green_3, styles.none)
     -- alpha
     Group.new("AlphaHeader", colors.indian_light_green, colors.none, styles.none)
-    Group.new("AlphaButtons", colors.indian_dark_orange, colors.none, styles.none)
+    Group.new("AlphaButtons", colors.b_orange, colors.none, styles.none)
     Group.new("AlphaShortcut", colors.indian_exp_grey_, colors.none, styles.none)
     Group.new("AlphaFooter", colors.b_red, colors.none, styles.none)
     -- snacks
@@ -700,7 +700,7 @@ function M.set_colors()
     Group.new("SnacksDashboardDesc", colors.b_blue:light(), colors.none, styles.none)
     Group.new("SnacksDashboardKey", colors.indian_grey, colors.none, styles.none)
     -- bufferline
-    Group.new("bufferlineIndicatorSelected", colors.indian_dark_orange, colors.none, styles.none)
+    Group.new("bufferlineIndicatorSelected", colors.b_orange, colors.none, styles.none)
     Group.new("BufferLineSeparator", colors.indian_light_cherry, colors.none, styles.none)
     Group.new("BufferlineIndicatorSelected", colors.b_yellow, colors.none, styles.none)
     Group.new("BufferLineTruncMarker", colors.white, colors.indian_light_cherry, styles.none)
@@ -709,7 +709,7 @@ function M.set_colors()
   end
 
   -- noice
-  Group.new("NoiceCmdlineIconHelp", colors.white, colors.indian_dark_orange, styles.none)
+  Group.new("NoiceCmdlineIconHelp", colors.white, colors.b_orange, styles.none)
   Group.new(
     "NoiceFormatProgressDone",
     colors.b_green,
