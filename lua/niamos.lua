@@ -723,6 +723,19 @@ function M.set_colors()
     Group.new("BufferLineBufferSelected", colors.indian_light_cherry, colors.none, styles.bold)
   end
 
+  -- noice
+  Group.new("NoiceCmdlineIconHelp", colors.white, colors.indian_dark_orange, styles.none)
+  Group.new(
+    "NoiceFormatProgressDone",
+    colors.indian_green,
+    colors.indian_green:light():light():light():light():light(),
+    styles.None
+  )
+
+  -- snacks
+  Group.new("SnacksNotifierBorderInfo", colors.indian_green:light(), colors.none, styles.none)
+  Group.new("SnacksNotifierTitleInfo", colors.indian_green:light(), colors.none, styles.none)
+
   function M.translate(group)
     if fn.has("nvim-0.6.0") == 0 then
       return group
