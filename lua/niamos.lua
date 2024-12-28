@@ -732,6 +732,10 @@ function M.set_colors()
     styles.None
   )
 
+  -- snacks
+  Group.new("SnacksNotifierBorderInfo", colors.indian_green:light(), colors.none, styles.none)
+  Group.new("SnacksNotifierTitleInfo", colors.indian_green:light(), colors.none, styles.none)
+
   function M.translate(group)
     if fn.has("nvim-0.6.0") == 0 then
       return group
