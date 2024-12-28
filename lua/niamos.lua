@@ -64,6 +64,7 @@ function M.set_colors()
   Color.new("indian_exp_grey", "#e4e4e4")
   Color.new("b_blue", "#3d7da7")
   Color.new("b_green", "#3e9997")
+  Color.new("b_green_lt_05", #e3f3f3)
   Color.new("indian_light_green", "#12b19c")
   Color.new("indian_light", "#f8fdf8")
   Color.new("indian_light_red", "#ff9999")
@@ -161,7 +162,7 @@ function M.set_colors()
   Group.new("Folded", colors.indian_grey, colors.indian_grey:light():light(), styles.none)
   Group.new("FoldColumn", colors.indian_grey, colors.none, styles.bold)
 
-  Group.new("DiffAdd", colors.b_green, colors.b_green:light():light():light():light():light(), styles.none)
+  Group.new("DiffAdd", colors.b_green, colors.b_green_lt_05, styles.none)
   Group.new("DiffChange", colors.yellow, colors.yellow:light():light():light():light(), styles.none)
   Group.new("DiffDelete", colors.b_red, colors.b_red:light():light():light(), styles.none)
   Group.new("DiffText", colors.b_blue, colors.b_blue:light():light():light():light(), styles.bold)
@@ -179,7 +180,7 @@ function M.set_colors()
 
   -- pum (popup menu)
   Group.new("Pmenu", colors.none, colors.indian_grey_02, styles.None)
-  Group.new("PmenuSel", colors.b_green, colors.b_green:light():light():light():light():light(), styles.None)
+  Group.new("PmenuSel", colors.b_green, colors.b_green_lt_05, styles.None)
   Group.new("PmenuThumb", colors.indian_exp_grey, colors.indian_grey, styles.None)
   -- Group.new("PmenuSbar", colors.none, colors.indian_grey:light():light(), styles.None)
 
@@ -287,7 +288,7 @@ function M.set_colors()
   Group.new("CmpItemKind", colors.green)
   Group.new("CmpItemMenu", groups.NormalNC)
   Group.new("CmpItemAbbr", colors.Normal, colors.none, styles.none)
-  Group.new("CmpItemAbbrMatch", colors.b_green, colors.b_green:light():light():light():light():light(), styles.None)
+  Group.new("CmpItemAbbrMatch", colors.b_green, colors.b_green_lt_05, styles.None)
   Group.new("CmpItemKindText", colors.b_orange, colors.none, styles.none)
   Group.new("CmpItemKindMethod", colors.green, colors.none, styles.none)
   Group.new("CmpItemKindFunction", colors.blue, colors.none, styles.none)
@@ -346,7 +347,7 @@ function M.set_colors()
   Group.new("SagaSep", colors.b_red, colors.none, styles.bold)
   Group.new("SagaWinbarSep", colors.b_green, colors.none, styles.none)
   Group.new("TargetFileName", colors.indian_grey:light(), colors.none, styles.bold)
-  Group.new("FinderParam", colors.b_green, colors.b_green:light():light():light():light():light(), styles.none)
+  Group.new("FinderParam", colors.b_green, colors.b_green_lt_05, styles.none)
   Group.new("FinderVirtText", colors.b_red, colors.none, styles.none)
   Group.new("DefinitionsIcon", colors.b_blue, colors.none, styles.none)
   Group.new("Definitions", colors.b_green, colors.none, styles.bold)
@@ -363,12 +364,7 @@ function M.set_colors()
   Group.new("DevIconLua", colors.b_blue, colors.none, styles.none)
 
   Group.new("TelescopeMatching", colors.b_red, colors.b_red:light():light():light(), styles.none)
-  Group.new(
-    "TelescopePreviewMatch",
-    colors.b_green,
-    colors.b_green:light():light():light():light():light(),
-    styles.none
-  )
+  Group.new("TelescopePreviewMatch", colors.b_green, colors.b_green_lt_05, styles.none)
   Group.new("TelescopeBorder", colors.base01) -- float border not quite dark enough, maybe that needs to change?
   Group.new("TelescopePromptBorder", colors.cyan) -- active border lighter for clarity
   Group.new("TelescopeTitle", groups.Normal) -- separate them from the border a little, but not make them pop
@@ -475,7 +471,7 @@ function M.set_colors()
     styles.none
   )
   Group.new("DiagnosticSignInfo", colors.indian_exp_blue, colors.none, styles.none)
-  Group.new("DiagnosticHint", colors.b_green, colors.b_green:light():light():light():light():light(), styles.none)
+  Group.new("DiagnosticHint", colors.b_green, colors.b_green_lt_05, styles.none)
   Group.new("DiagnosticSignHint", colors.b_green, colors.none, styles.bold)
   Group.new("MsgSeparator", colors.indian_exp_green, colors.none, styles.underline)
   Group.new("DiagnosticUnderlineOk", colors.indian_light_cherry, colors.none, styles.underline)
@@ -710,12 +706,7 @@ function M.set_colors()
 
   -- noice
   Group.new("NoiceCmdlineIconHelp", colors.white, colors.b_orange, styles.none)
-  Group.new(
-    "NoiceFormatProgressDone",
-    colors.b_green,
-    colors.b_green:light():light():light():light():light(),
-    styles.None
-  )
+  Group.new("NoiceFormatProgressDone", colors.b_green, colors.b_green_lt_05, styles.None)
 
   -- snacks
   Group.new("SnacksNotifierBorderInfo", colors.b_green:light(), colors.none, styles.none)
