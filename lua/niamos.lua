@@ -51,7 +51,8 @@ function M.set_colors()
   Color.new("green", "#719e07")
 
   Color.new("black", "#161618")
-  Color.new("indian_light_black", "#181a1c")
+  Color.new("b_black", "#161618")
+  Color.new("b_black_lt_01", "#181a1c")
   Color.new("yellow", "#ffc919")
   Color.new("red", "#ff5f5f")
   Color.new("b_yellow", "#faba00")
@@ -623,9 +624,9 @@ function M.set_colors()
 
     -- lualine
     Group.new("LuaLineNormalA", colors.white, colors.b_blue, styles.bold)
-    Group.new("LuaLineNormalB", colors.indian_light_black, colors.b_grey)
+    Group.new("LuaLineNormalB", colors.b_black_lt_01, colors.b_grey)
     Group.new("LuaLineNormalC", colors.b_blue, colors.none)
-    Group.new("LuaLineNormalY", colors.indian_light_black, colors.b_grey)
+    Group.new("LuaLineNormalY", colors.b_black_lt_01, colors.b_grey)
 
     Group.new("LuaLineCommandA", colors.white, colors.b_red, styles.bold)
     Group.new("LuaLineInsertA", colors.white, colors.b_green, styles.bold)
