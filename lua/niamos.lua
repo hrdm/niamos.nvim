@@ -66,7 +66,9 @@ function M.set_colors()
   Color.new("indian_light_grey", "#f3f3f3")
   Color.new("indian_exp_grey", "#e4e4e4")
   Color.new("b_blue", "#3d7da7")
+  Color.new("b_green_dk_01", "#2f7573")
   Color.new("b_green", "#3e9997")
+  Color.new("b_green_lt_02", "#51b9b6")
   Color.new("b_green_lt_05", "#e3f3f3")
   Color.new("indian_light_green", "#12b19c")
   Color.new("indian_light", "#f8fdf8")
@@ -689,9 +691,9 @@ function M.set_colors()
     Group.new("AlphaShortcut", colors.indian_exp_grey_, colors.none, styles.none)
     Group.new("AlphaFooter", colors.b_red, colors.none, styles.none)
     -- snacks
-    Group.new("SnacksDashboardHeader", colors.b_green:dark(), colors.none, styles.bold)
+    Group.new("SnacksDashboardHeader", colors.b_green_dk_01, colors.none, styles.bold)
     Group.new("SnacksDashboardTitle", colors.b_green, colors.none, styles.bold)
-    Group.new("SnacksDashboardIcon", colors.b_green:dark(), colors.none, styles.none)
+    Group.new("SnacksDashboardIcon", colors.b_green_dk_01, colors.none, styles.none)
     Group.new("SnacksDashboardDesc", colors.b_blue:light(), colors.none, styles.none)
     Group.new("SnacksDashboardKey", colors.indian_grey, colors.none, styles.none)
     -- bufferline
@@ -708,8 +710,8 @@ function M.set_colors()
   Group.new("NoiceFormatProgressDone", colors.b_green, colors.b_green_lt_05, styles.None)
 
   -- snacks
-  Group.new("SnacksNotifierBorderInfo", colors.b_green:light(), colors.none, styles.none)
-  Group.new("SnacksNotifierTitleInfo", colors.b_green:light(), colors.none, styles.none)
+  Group.new("SnacksNotifierBorderInfo", colors.b_green_lt_02, colors.none, styles.none)
+  Group.new("SnacksNotifierTitleInfo", colors.b_green_lt_02, colors.none, styles.none)
 
   function M.translate(group)
     if fn.has("nvim-0.6.0") == 0 then
