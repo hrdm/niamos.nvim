@@ -71,6 +71,7 @@ function M.set_colors()
   Color.new("b_grey_lt_02", "#f2f2f2")
   Color.new("b_grey_lt_01", "#F0F0F0")
   Color.new("b_grey", "#e4e4e4")
+  Color.new("b_white", "#ffffff")
   Color.new("b_black_lt_01", "#181a1c")
   Color.new("b_black", "#161618")
   Color.new("b_violet", "#7469B6")
@@ -205,7 +206,7 @@ function M.set_colors()
   Group.new("TabLine", colors.b_blue, colors.none, styles.none) -- not selected tab
   Group.new("TabLineFill", colors.b_blue, colors.none, styles.none) -- filler from a tab to right
 
-  Group.new("TabLineSel", colors.white, colors.b_blue, styles.bold)
+  Group.new("TabLineSel", colors.b_white, colors.b_blue, styles.bold)
   Group.new("TabLineSeparatorSel", colors.cyan, colors.none)
 
   Group.new("TabLineSep", colors.b_blue, colors.none, styles.none) -- right separator
@@ -240,8 +241,8 @@ function M.set_colors()
   Group.new("GitSignsAdd", colors.s_green, colors.none, styles.none)
   Group.new("GitSignsChange", colors.yellow, colors.none, styles.none)
   Group.new("GitSignsDelete", colors.b_red, colors.none, styles.none)
-  Group.new("DiagnosticERRORReverse", colors.white, colors.b_red, styles.bold)
-  Group.new("DiagnosticINFOReverse", colors.white, colors.s_blue, styles.bold)
+  Group.new("DiagnosticERRORReverse", colors.b_white, colors.b_red, styles.bold)
+  Group.new("DiagnosticINFOReverse", colors.b_white, colors.s_blue, styles.bold)
 
   Group.new("GitSignsStagedChange", colors.s_pink, colors.none, styles.bold)
   Group.new("GitSignsStagedAdd", colors.s_pink, colors.none, styles.bold)
@@ -475,7 +476,7 @@ function M.set_colors()
   Group.new("DiagnosticError", colors.b_red, colors.b_red_lt_03, styles.none)
   Group.new("DiagnosticWarn", colors.b_yellow, colors.b_yellow_lt_04, styles.none)
   Group.new("DiagnosticSignWarn", colors.b_yellow, colors.none, styles.bold)
-  Group.new("DiagnosticWARNReverse", colors.white, colors.b_yellow, styles.bold)
+  Group.new("DiagnosticWARNReverse", colors.b_white, colors.b_yellow, styles.bold)
   Group.new("DiagnosticInfo", colors.s_blue, colors.none, styles.none)
   Group.new("DiagnosticSignInfo", colors.s_blue, colors.none, styles.none)
   Group.new("DiagnosticHint", colors.b_green, colors.b_green_lt_05, styles.none)
@@ -628,17 +629,17 @@ function M.set_colors()
     Group.link("@lsp.type.operator", groups.Operator)
 
     -- lualine
-    Group.new("LuaLineNormalA", colors.white, colors.b_blue, styles.bold)
+    Group.new("LuaLineNormalA", colors.b_white, colors.b_blue, styles.bold)
     Group.new("LuaLineNormalB", colors.b_black_lt_01, colors.b_grey)
     Group.new("LuaLineNormalC", colors.b_blue, colors.none)
     Group.new("LuaLineNormalY", colors.b_black_lt_01, colors.b_grey)
 
-    Group.new("LuaLineCommandA", colors.white, colors.b_red, styles.bold)
-    Group.new("LuaLineInsertA", colors.white, colors.b_green, styles.bold)
-    Group.new("LuaLineVisualA", colors.white, colors.b_red, styles.bold)
-    Group.new("LuaLineReplaceA", colors.white, colors.b_red, styles.bold)
+    Group.new("LuaLineCommandA", colors.b_white, colors.b_red, styles.bold)
+    Group.new("LuaLineInsertA", colors.b_white, colors.b_green, styles.bold)
+    Group.new("LuaLineVisualA", colors.b_white, colors.b_red, styles.bold)
+    Group.new("LuaLineReplaceA", colors.b_white, colors.b_red, styles.bold)
 
-    Group.new("LuaLineInactiveA", colors.white, colors.b_grey, styles.bold)
+    Group.new("LuaLineInactiveA", colors.b_white, colors.b_grey, styles.bold)
     Group.new("LuaLineInactiveB", colors.b_grey, colors.none)
     Group.new("LuaLineInactiveC", colors.b_grey, colors.none)
     Group.new("LuaLineInactiveY", colors.b_grey, colors.none)
@@ -686,10 +687,10 @@ function M.set_colors()
     Group.new("SnacksIndent", colors.b_grey, colors.none, styles.none)
 
     -- noice
-    Group.new("NoiceCmdlineIconLua", colors.white, colors.b_blue_lt_01, styles.none)
-    Group.new("NoiceCmdlineIconSearch", colors.white, colors.b_red, styles.none)
-    Group.new("NoiceCmdlineIconCmdline", colors.white, colors.b_green, styles.none)
-    Group.new("NoiceCmdlineIconFilter", colors.white, colors.b_orange, styles.none)
+    Group.new("NoiceCmdlineIconLua", colors.b_white, colors.b_blue_lt_01, styles.none)
+    Group.new("NoiceCmdlineIconSearch", colors.b_white, colors.b_red, styles.none)
+    Group.new("NoiceCmdlineIconCmdline", colors.b_white, colors.b_green, styles.none)
+    Group.new("NoiceCmdlineIconFilter", colors.b_white, colors.b_orange, styles.none)
     Group.new("NoiceCursor", colors.none, colors.s_green_dk_01, styles.none)
     -- alpha
     Group.new("AlphaHeader", colors.s_green, colors.none, styles.none)
@@ -706,13 +707,13 @@ function M.set_colors()
     Group.new("bufferlineIndicatorSelected", colors.b_orange, colors.none, styles.none)
     Group.new("BufferLineSeparator", colors.s_pink, colors.none, styles.none)
     Group.new("BufferlineIndicatorSelected", colors.b_yellow, colors.none, styles.none)
-    Group.new("BufferLineTruncMarker", colors.white, colors.s_pink, styles.none)
+    Group.new("BufferLineTruncMarker", colors.b_white, colors.s_pink, styles.none)
     Group.new("BufferLineModified", colors.t_green, colors.none, styles.none)
     Group.new("BufferLineBufferSelected", colors.s_pink, colors.none, styles.bold)
   end
 
   -- noice
-  Group.new("NoiceCmdlineIconHelp", colors.white, colors.b_orange, styles.none)
+  Group.new("NoiceCmdlineIconHelp", colors.b_white, colors.b_orange, styles.none)
   Group.new("NoiceFormatProgressDone", colors.b_green, colors.b_green_lt_05, styles.None)
 
   -- snacks
