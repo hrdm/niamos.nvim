@@ -41,9 +41,7 @@ function M.set_colors()
   Color.new("base1", "#93a1a1")
   Color.new("base2", "#eee8d5")
   Color.new("base3", "#fdf6e3")
-  Color.new("yellow", "#b58900")
   Color.new("orange", "#cb4b16")
-  Color.new("red", "#dc322f")
   Color.new("magenta", "#d33682")
   Color.new("violet", "#6c71c4")
   Color.new("blue", "#268bd2")
@@ -51,35 +49,56 @@ function M.set_colors()
   Color.new("green", "#719e07")
 
   Color.new("black", "#161618")
-  Color.new("indian_light_black", "#181a1c")
-  Color.new("yellow", "#ffc919")
   Color.new("red", "#ff5f5f")
-  Color.new("indian_yellow", "#faba00")
-  Color.new("indian_red", "#ff5f5f")
-  Color.new("indian_grey", "#b2baba")
-  Color.new("indian_grey_02", "#f2f2f2")
-  Color.new("indian_grey_09", "#f9f9f9")
-  Color.new("indian_grey_10", "#fafafa")
-  Color.new("indian_light_grey", "#f3f3f3")
-  Color.new("indian_exp_grey", "#e4e4e4")
-  Color.new("indian_blue", "#3d7da7")
-  Color.new("indian_green", "#3e9997")
-  Color.new("indian_light_green", "#12b19c")
-  Color.new("indian_light", "#f8fdf8")
-  Color.new("indian_light_red", "#ff9999")
-  Color.new("indian_dark_green", "#002b36")
-  Color.new("indian_light_orange", "#ffbf7e")
-  Color.new("indian_dark_orange", "#ffaf5f")
-  Color.new("indian_exp_blue", "#3cacce")
-  Color.new("Normal", "#4e585a")
-  Color.new("indian_exp_green", "#87c095")
-  Color.new("personal_background", "#F0F0F0")
-  Color.new("indian_purple", "#7469B6")
-  Color.new("indian_light_cherry", "#FF5580")
-  Color.new("apple_dark_3", "#212124")
-  Color.new("twiter_light_", "#f3f4f6")
-  Color.new("indian_dark_green_2", "#589797")
-  Color.new("indian_dark_green_3", "#2aa198")
+  Color.new("yellow", "#ffc919")
+
+  -- base or primary
+  Color.new("b_blue_lt_04", "#c6dcea")
+  Color.new("b_blue_lt_01", "#5697c1")
+  Color.new("b_blue", "#3d7da7")
+  Color.new("b_green_lt_05", "#e3f3f3")
+  Color.new("b_green_lt_02", "#51b9b6")
+  Color.new("b_green", "#3e9997")
+  Color.new("b_green_dk_01", "#2f7573")
+  Color.new("b_yellow_lt_04", "#fff9e5")
+  Color.new("b_yellow", "#faba00")
+  Color.new("b_orange", "#ffaf5f")
+  Color.new("b_red_lt_03", "#fff8f8")
+  Color.new("b_red_lt_02", "#ffc5c5")
+  Color.new("b_red", "#ff5f5f")
+  Color.new("b_grey_lt_04", "#fafafa")
+  Color.new("b_grey_lt_03", "#f3f4f6")
+  Color.new("b_grey_lt_02", "#f2f2f2")
+  Color.new("b_grey_lt_01", "#F0F0F0")
+  Color.new("b_grey", "#e4e4e4")
+  Color.new("b_white", "#ffffff")
+  Color.new("b_black_lt_02", "#444446")
+  Color.new("b_black_lt_01", "#181a1c")
+  Color.new("b_black", "#161618")
+  Color.new("b_violet", "#7469B6")
+
+  -- secondary
+  Color.new("s_blue", "#3cacce")
+  Color.new("s_blue_dk_01", "#2b8eac")
+  Color.new("s_green", "#12b19c")
+  Color.new("s_green_dk_01", "#2aa198")
+  Color.new("s_green_dk_02", "#589797")
+  Color.new("s_orange_lt_02", "#fff2e4")
+  Color.new("s_orange", "#ffbf7e")
+  Color.new("s_orange_dk_01", "#ffa64b")
+  Color.new("s_red", "#ff9999")
+  Color.new("s_red_dk_01", "#ff6666")
+  Color.new("s_pink", "#FF5580")
+  Color.new("s_grey_lt_02", "#e8eaea")
+  Color.new("s_grey", "#b2baba")
+  Color.new("s_grey_dk_01", "#97a2a2")
+
+  -- tertiary
+  Color.new("t_green_dk_01", "#66ae77")
+  Color.new("t_green", "#87c095")
+  Color.new("t_grey_lt_01", "#667375")
+  Color.new("t_grey", "#4e585a")
+
   Group.new("Error", colors.red)
   Group.new("Warning", colors.yellow)
   Group.new("Information", colors.blue)
@@ -91,18 +110,18 @@ function M.set_colors()
 
   local bg_color = config.background_color
 
-  Group.new("Normal", colors.Normal:light(), colors.none, styles.none)
-  Group.new("NormalFloat", colors.none, colors.indian_grey_10, styles.none)
+  Group.new("Normal", colors.t_grey_lt_01, colors.none, styles.none)
+  Group.new("NormalFloat", colors.none, colors.b_grey_lt_04, styles.none)
   -- normal non-current text
   Group.new("NormalNC", colors.base0:dark(), bg_color)
 
   Group.new("Comment", colors.base0, colors.none, styles.italic)
   Group.new("Constant", colors.cyan)
-  Group.new("Identifier", colors.indian_exp_blue:dark(), colors.none, styles.none)
+  Group.new("Identifier", colors.s_blue_dk_01, colors.none, styles.none)
 
   -- any statement, conditional, repeat (for, do while), label, operator
-  Group.new("Statement", colors.indian_light_green, colors.none, styles.none)
-  Group.new("pythonBuiltin", colors.indian_exp_blue, colors.none, styles.none)
+  Group.new("Statement", colors.s_green, colors.none, styles.none)
+  Group.new("pythonBuiltin", colors.s_blue, colors.none, styles.none)
 
   Group.new("PreProc", colors.red:dark(), colors.none, styles.none)
   Group.new("Type", colors.yellow)
@@ -113,19 +132,19 @@ function M.set_colors()
   Group.new("Ignore", colors.none)
   Group.new("Error", colors.red)
   Group.new("Todo", colors.magenta, colors.none, styles.bold)
-  Group.new("Function", colors.indian_exp_blue, colors.none, styles.none)
+  Group.new("Function", colors.s_blue, colors.none, styles.none)
   Group.link("Include", groups.PreProc)
   Group.link("Macro", groups.PreProc)
   Group.link("Keyword", groups.Statement)
   Group.new("Delimiter", colors.red, colors.none, styles.none)
   Group.link("Repeat", groups.Statement)
-  Group.new("Conditional", colors.indian_light_green, colors.none, styles.none)
+  Group.new("Conditional", colors.s_green, colors.none, styles.none)
   Group.link("Define", groups.PreProc)
-  Group.new("Operator", colors.indian_exp_blue, colors.none, styles.none)
-  Group.new("Character", colors.indian_exp_green, colors.none, styles.none)
+  Group.new("Operator", colors.s_blue, colors.none, styles.none)
+  Group.new("Character", colors.t_green, colors.none, styles.none)
   Group.link("Float", groups.Constant)
   Group.link("Boolean", groups.Constant)
-  Group.new("Number", colors.indian_light_orange:dark(), colors.none, styles.none)
+  Group.new("Number", colors.s_orange_dk_01, colors.none, styles.none)
   Group.link("Debug", groups.Special)
   Group.link("Label", groups.Statement)
   Group.link("Exception", groups.Statement)
@@ -134,20 +153,20 @@ function M.set_colors()
 
   Group.link("SpecialChar", groups.Special)
   Group.new("Text", colors.cyan)
-  Group.new("String", colors.indian_exp_green, colors.none, styles.none)
+  Group.new("String", colors.t_green, colors.none, styles.none)
   Group.new("NonText", colors.base00, colors.none, styles.bold)
-  Group.new("StatusLine", colors.indian_grey:dark(), colors.none, styles.undercurl)
+  Group.new("StatusLine", colors.s_grey_dk_01, colors.none, styles.undercurl)
   Group.new("StatusLineNC", colors.base00, colors.base02, styles.reverse)
-  Group.new("Visual", colors.none, colors.indian_light_orange:light():light(), styles.none)
+  Group.new("Visual", colors.none, colors.s_orange_lt_02, styles.none)
 
   Group.new("Directory", colors.blue)
-  Group.new("ErrorMsg", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
-  Group.new("MsgArea", colors.indian_light_green, colors.none, styles.none)
+  Group.new("ErrorMsg", colors.b_red, colors.b_red_lt_03, styles.none)
+  Group.new("MsgArea", colors.s_green, colors.none, styles.none)
 
-  Group.new("IncSearch", colors.indian_red, colors.indian_red:light():light(), styles.None)
-  Group.new("Search", colors.indian_yellow, colors.indian_yellow:light():light():light():light(), styles.None)
+  Group.new("IncSearch", colors.b_red, colors.b_red_lt_02, styles.None)
+  Group.new("Search", colors.b_yellow, colors.b_yellow_lt_04, styles.None)
 
-  Group.new("CurSearch", colors.indian_red, colors.indian_yellow:light():light():light():light(), styles.None)
+  Group.new("CurSearch", colors.b_red, colors.b_yellow_lt_04, styles.None)
 
   Group.new("MoreMsg", colors.blue, colors.none, styles.NONE)
   Group.new("ModeMsg", colors.blue, colors.none, styles.NONE)
@@ -158,16 +177,16 @@ function M.set_colors()
   Group.new("VisualNOS", colors.none, colors.base02, styles.reverse)
   Group.new("WarningMsg", colors.orange, colors.none, styles.bold)
   Group.new("WildMenu", colors.base2, colors.base02, styles.reverse)
-  Group.new("Folded", colors.indian_grey, colors.indian_grey:light():light(), styles.none)
-  Group.new("FoldColumn", colors.indian_grey, colors.none, styles.bold)
+  Group.new("Folded", colors.s_grey, colors.s_grey_lt_02, styles.none)
+  Group.new("FoldColumn", colors.s_grey, colors.none, styles.bold)
 
-  Group.new("DiffAdd", colors.indian_green, colors.indian_green:light():light():light():light():light(), styles.none)
-  Group.new("DiffChange", colors.yellow, colors.yellow:light():light():light():light(), styles.none)
-  Group.new("DiffDelete", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
-  Group.new("DiffText", colors.indian_blue, colors.indian_blue:light():light():light():light(), styles.bold)
-  Group.new("DiffviewFilePanelSelected", colors.indian_red, colors.none, styles.none)
-  Group.new("NeoTreeNormal", colors.Normal, colors.personal_background, styles.NONE)
-  Group.new("NeoTreeNormalNC", colors.Normal, colors.personal_background, styles.NONE)
+  Group.new("DiffAdd", colors.b_green, colors.b_green_lt_05, styles.none)
+  Group.new("DiffChange", colors.yellow, colors.b_yellow_lt_04, styles.none)
+  Group.new("DiffDelete", colors.b_red, colors.b_red_lt_03, styles.none)
+  Group.new("DiffText", colors.b_blue, colors.b_blue_lt_04, styles.bold)
+  Group.new("DiffviewFilePanelSelected", colors.b_red, colors.none, styles.none)
+  Group.new("NeoTreeNormal", colors.t_grey, colors.b_grey_lt_01, styles.NONE)
+  Group.new("NeoTreeNormalNC", colors.t_grey, colors.b_grey_lt_01, styles.NONE)
 
   Group.new("SignColumn", colors.base0, colors.none, styles.NONE)
   Group.new("Conceal", colors.blue, colors.none, styles.NONE)
@@ -178,30 +197,27 @@ function M.set_colors()
   Group.new("SpellLocal", colors.none, colors.none, styles.undercurl, colors.yellow)
 
   -- pum (popup menu)
-  Group.new("Pmenu", colors.none, colors.indian_grey_02, styles.None)
-  Group.new("PmenuSel", colors.indian_green, colors.indian_green:light():light():light():light():light(), styles.None)
-  Group.new("PmenuThumb", colors.indian_exp_grey, colors.indian_grey, styles.None)
-  -- Group.new("PmenuSbar", colors.none, colors.indian_grey:light():light(), styles.None)
+  Group.new("Pmenu", colors.none, colors.b_grey_lt_02, styles.None)
+  Group.new("PmenuSel", colors.b_green, colors.b_green_lt_05, styles.None)
+  Group.new("PmenuThumb", colors.b_grey, colors.s_grey, styles.None)
 
   -- be nice for this float border to be cyan if active
-  Group.new("FloatBorder", colors.indian_dark_orange, colors.none)
-  -- Group.new("FloatShadow", colors.none, colors.indian_light_grey)
-  -- Group.new("FloatShadowThrough", colors.none, colors.indian_light_grey)
+  Group.new("FloatBorder", colors.b_orange, colors.none)
 
-  Group.new("TabLine", colors.indian_blue, colors.none, styles.none) -- not selected tab
-  Group.new("TabLineFill", colors.indian_blue, colors.none, styles.none) -- filler from a tab to right
+  Group.new("TabLine", colors.b_blue, colors.none, styles.none) -- not selected tab
+  Group.new("TabLineFill", colors.b_blue, colors.none, styles.none) -- filler from a tab to right
 
-  Group.new("TabLineSel", colors.white, colors.indian_blue, styles.bold)
+  Group.new("TabLineSel", colors.b_white, colors.b_blue, styles.bold)
   Group.new("TabLineSeparatorSel", colors.cyan, colors.none)
 
-  Group.new("TabLineSep", colors.indian_blue, colors.none, styles.none) -- right separator
-  Group.new("TabLineSep2", colors.none, colors.indian_blue, styles.reverse) -- left separator
-  Group.new("TabLineSelMod", colors.yellow, colors.indian_blue, styles.bold) -- modified tab
-  Group.new("TabLineMod", colors.indian_red, colors.none, styles.bold) -- modified tab not selected
+  Group.new("TabLineSep", colors.b_blue, colors.none, styles.none) -- right separator
+  Group.new("TabLineSep2", colors.none, colors.b_blue, styles.reverse) -- left separator
+  Group.new("TabLineSelMod", colors.yellow, colors.b_blue, styles.bold) -- modified tab
+  Group.new("TabLineMod", colors.b_red, colors.none, styles.bold) -- modified tab not selected
 
-  Group.new("LineNr", colors.indian_grey, colors.none, styles.none)
-  Group.new("CursorLine", colors.none, colors.twiter_light_, styles.none)
-  Group.new("CursorLineNr", colors.indian_yellow, colors.twiter_light_, styles.none)
+  Group.new("LineNr", colors.s_grey, colors.none, styles.none)
+  Group.new("CursorLine", colors.none, colors.b_grey_lt_03, styles.none)
+  Group.new("CursorLineNr", colors.b_yellow, colors.b_grey_lt_03, styles.none)
 
   Group.new("ColorColumn", colors.none, colors.base02, styles.NONE)
   Group.new("Cursor", colors.base03, colors.base0, styles.NONE)
@@ -211,7 +227,7 @@ function M.set_colors()
 
   Group.new("MatchParen", colors.red, colors.none, styles.bold + styles.undercurl)
 
-  Group.new("gitgutteradd", colors.indian_exp_green:dark(), colors.none, styles.none)
+  Group.new("gitgutteradd", colors.t_green_dk_01, colors.none, styles.none)
   Group.new("GitGutterChange", colors.yellow)
   Group.new("GitGutterDelete", colors.red)
   Group.new("GitGutterChangeDelete", colors.red)
@@ -223,15 +239,15 @@ function M.set_colors()
   Group.new("GitSignsDeleteLn", colors.red)
   Group.new("GitSignsDeleteNr", colors.red)
   Group.link("GitSignsCurrentLineBlame", groups.Comment)
-  Group.new("GitSignsAdd", colors.indian_light_green, colors.none, styles.none)
+  Group.new("GitSignsAdd", colors.s_green, colors.none, styles.none)
   Group.new("GitSignsChange", colors.yellow, colors.none, styles.none)
-  Group.new("GitSignsDelete", colors.indian_red, colors.none, styles.none)
-  Group.new("DiagnosticERRORReverse", colors.white, colors.indian_red, styles.bold)
-  Group.new("DiagnosticINFOReverse", colors.white, colors.indian_exp_blue, styles.bold)
+  Group.new("GitSignsDelete", colors.b_red, colors.none, styles.none)
+  Group.new("DiagnosticERRORReverse", colors.b_white, colors.b_red, styles.bold)
+  Group.new("DiagnosticINFOReverse", colors.b_white, colors.s_blue, styles.bold)
 
-  Group.new("GitSignsStagedChange", colors.indian_light_cherry, colors.none, styles.bold)
-  Group.new("GitSignsStagedAdd", colors.indian_light_cherry, colors.none, styles.bold)
-  Group.new("GitSignsStagedDelete", colors.indian_red, colors.none, styles.bold)
+  Group.new("GitSignsStagedChange", colors.s_pink, colors.none, styles.bold)
+  Group.new("GitSignsStagedAdd", colors.s_pink, colors.none, styles.bold)
+  Group.new("GitSignsStagedDelete", colors.b_red, colors.none, styles.bold)
 
   -- vim highlighting
   Group.link("vimVar", groups.Identifier)
@@ -286,14 +302,9 @@ function M.set_colors()
 
   Group.new("CmpItemKind", colors.green)
   Group.new("CmpItemMenu", groups.NormalNC)
-  Group.new("CmpItemAbbr", colors.Normal, colors.none, styles.none)
-  Group.new(
-    "CmpItemAbbrMatch",
-    colors.indian_green,
-    colors.indian_green:light():light():light():light():light(),
-    styles.None
-  )
-  Group.new("CmpItemKindText", colors.indian_dark_orange, colors.none, styles.none)
+  Group.new("CmpItemAbbr", colors.t_grey, colors.none, styles.none)
+  Group.new("CmpItemAbbrMatch", colors.b_green, colors.b_green_lt_05, styles.None)
+  Group.new("CmpItemKindText", colors.b_orange, colors.none, styles.none)
   Group.new("CmpItemKindMethod", colors.green, colors.none, styles.none)
   Group.new("CmpItemKindFunction", colors.blue, colors.none, styles.none)
   Group.new("CmpItemKindConstructor", colors.orange, colors.none, styles.none)
@@ -331,62 +342,51 @@ function M.set_colors()
   Group.new("LSPSagaDiagnosticBorder", groups.LspSagaHoverBorder)
   Group.new("LspSagaSignatureHelpBorder", groups.LspSagaHoverBorder)
   Group.new("LspSagaCodeActionBorder", groups.LspSagaHoverBorder)
-  Group.new("LspSagaLspFinderBorder", colors.indian_blue, colors.none, styles.none)
+  Group.new("LspSagaLspFinderBorder", colors.b_blue, colors.none, styles.none)
   Group.new("LspSagaFloatWinBorder", groups.LspSagaHoverBorder)
   Group.new("LspSagaSignatureHelpBorder", groups.LspSagaHoverBorder)
   Group.new("LspSagaDefPreviewBorder", groups.LspSagaHoverBorder)
   -- Group.new("LspSagaAutoPreviewBorder", groups.LspSagaHoverBorder)
-  Group.new("LspSagaAutoPreview", colors.indian_red, colors.indian_red:light():light():light(), styles.bold)
+  Group.new("LspSagaAutoPreview", colors.b_red, colors.b_red_lt_03, styles.bold)
 
   Group.new("LspFloatWinBorder", groups.LspSagaHoverBorder)
   Group.new("LspLinesDiagBorder", groups.LspSagaHoverBorder)
-  Group.new("LspSagaFinderSelection", colors.indian_green, colors.none, styles.bold)
+  Group.new("LspSagaFinderSelection", colors.b_green, colors.none, styles.bold)
   --Group.new('SagaShadow', colors.base02)
 
   Group.new("SagaNormal", colors.none, colors.none, styles.none)
-  Group.new("SagaBorder", colors.indian_dark_orange, colors.none, styles.none)
-  Group.new("SagaFolder", colors.indian_exp_blue, colors.none, styles.bold)
-  Group.new("SagaFolderName", colors.indian_green, colors.none, styles.bold)
-  Group.new("SagaFileName", colors.indian_grey:dark(), colors.none, styles.bold)
-  Group.new("SagaSep", colors.indian_red, colors.none, styles.bold)
-  Group.new("SagaWinbarSep", colors.indian_green, colors.none, styles.none)
-  Group.new("TargetFileName", colors.indian_grey:light(), colors.none, styles.bold)
-  Group.new(
-    "FinderParam",
-    colors.indian_green,
-    colors.indian_green:light():light():light():light():light(),
-    styles.none
-  )
-  Group.new("FinderVirtText", colors.indian_red, colors.none, styles.none)
-  Group.new("DefinitionsIcon", colors.indian_blue, colors.none, styles.none)
-  Group.new("Definitions", colors.indian_green, colors.none, styles.bold)
-  Group.new("DefinitionCount", colors.indian_red, colors.none, styles.none)
-  Group.new("ReferencesIcon", colors.indian_blue, colors.none, styles.none)
-  Group.new("References", colors.indian_green, colors.none, styles.bold)
-  Group.new("ReferencesCount", colors.indian_red, colors.none, styles.none)
-  Group.new("ImplementsIcon", colors.indian_blue, colors.none, styles.none)
-  Group.new("Implements", colors.indian_green, colors.none, styles.bold)
-  Group.new("ImplementsCount", colors.indian_red, colors.none, styles.none)
-  Group.new("DefinitionBorder", colors.indian_red, colors.indian_red:light():light():light(), styles.bold)
+  Group.new("SagaBorder", colors.b_orange, colors.none, styles.none)
+  Group.new("SagaFolder", colors.s_blue, colors.none, styles.bold)
+  Group.new("SagaFolderName", colors.b_green, colors.none, styles.bold)
+  Group.new("SagaFileName", colors.s_grey_dk_01, colors.none, styles.bold)
+  Group.new("SagaSep", colors.b_red, colors.none, styles.bold)
+  Group.new("SagaWinbarSep", colors.b_green, colors.none, styles.none)
+  Group.new("FinderParam", colors.b_green, colors.b_green_lt_05, styles.none)
+  Group.new("FinderVirtText", colors.b_red, colors.none, styles.none)
+  Group.new("DefinitionsIcon", colors.b_blue, colors.none, styles.none)
+  Group.new("Definitions", colors.b_green, colors.none, styles.bold)
+  Group.new("DefinitionCount", colors.b_red, colors.none, styles.none)
+  Group.new("ReferencesIcon", colors.b_blue, colors.none, styles.none)
+  Group.new("References", colors.b_green, colors.none, styles.bold)
+  Group.new("ReferencesCount", colors.b_red, colors.none, styles.none)
+  Group.new("ImplementsIcon", colors.b_blue, colors.none, styles.none)
+  Group.new("Implements", colors.b_green, colors.none, styles.bold)
+  Group.new("ImplementsCount", colors.b_red, colors.none, styles.none)
+  Group.new("DefinitionBorder", colors.b_red, colors.b_red_lt_03, styles.bold)
 
-  Group.new("DevIconPy", colors.indian_yellow, colors.none, styles.none)
-  Group.new("DevIconLua", colors.indian_blue, colors.none, styles.none)
+  Group.new("DevIconPy", colors.b_yellow, colors.none, styles.none)
+  Group.new("DevIconLua", colors.b_blue, colors.none, styles.none)
 
-  Group.new("TelescopeMatching", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
-  Group.new(
-    "TelescopePreviewMatch",
-    colors.indian_green,
-    colors.indian_green:light():light():light():light():light(),
-    styles.none
-  )
+  Group.new("TelescopeMatching", colors.b_red, colors.b_red_lt_03, styles.none)
+  Group.new("TelescopePreviewMatch", colors.b_green, colors.b_green_lt_05, styles.none)
   Group.new("TelescopeBorder", colors.base01) -- float border not quite dark enough, maybe that needs to change?
   Group.new("TelescopePromptBorder", colors.cyan) -- active border lighter for clarity
   Group.new("TelescopeTitle", groups.Normal) -- separate them from the border a little, but not make them pop
   Group.new("TelescopePromptPrefix", groups.Normal) -- default is groups.Identifier
   Group.link("TelescopeSelection", groups.CursorLine)
   Group.new("TelescopeSelectionCaret", colors.cyan)
-  Group.new("TelescopeResultsBorder", colors.indian_green, colors.none, styles.none)
-  Group.new("TelescopePreviewBorder", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
+  Group.new("TelescopeResultsBorder", colors.b_green, colors.none, styles.none)
+  Group.new("TelescopePreviewBorder", colors.b_red, colors.b_red_lt_03, styles.none)
 
   Group.new("NeogitDiffAddHighlight", colors.green, colors.base02)
   Group.new("NeogitDiffDeleteHighlight", colors.red, colors.base02)
@@ -470,34 +470,24 @@ function M.set_colors()
   Group.link("TSTag", groups.Special)
   Group.link("TSTagDelimiter", groups.Delimiter)
   Group.link("TSTitle", groups.Title)
-  Group.new("TSType", colors.indian_light_red, colors.none, styles.NONE)
-  Group.new("TSTypeBuiltin", colors.indian_light_red, colors.none, styles.NONE)
+  Group.new("TSType", colors.s_red, colors.none, styles.NONE)
+  Group.new("TSTypeBuiltin", colors.s_red, colors.none, styles.NONE)
 
-  Group.new("DiagnosticSignError", colors.indian_red, colors.none, styles.bold)
-  Group.new("DiagnosticError", colors.indian_red, colors.indian_red:light():light():light(), styles.none)
-  Group.new("DiagnosticWarn", colors.indian_yellow, colors.indian_yellow:light():light():light():light(), styles.none)
-  Group.new("DiagnosticSignWarn", colors.indian_yellow, colors.none, styles.bold)
-  Group.new("DiagnosticWARNReverse", colors.white, colors.indian_yellow, styles.bold)
-  Group.new(
-    "DiagnosticInfo",
-    colors.indian_exp_blue,
-    colors.indian_exp_blue:light():light():light():light(),
-    styles.none
-  )
-  Group.new("DiagnosticSignInfo", colors.indian_exp_blue, colors.none, styles.none)
-  Group.new(
-    "DiagnosticHint",
-    colors.indian_green,
-    colors.indian_green:light():light():light():light():light(),
-    styles.none
-  )
-  Group.new("DiagnosticSignHint", colors.indian_green, colors.none, styles.bold)
-  Group.new("MsgSeparator", colors.indian_exp_green, colors.none, styles.underline)
-  Group.new("DiagnosticUnderlineOk", colors.indian_light_cherry, colors.none, styles.underline)
-  Group.new("DiagnosticUnderlineError", colors.indian_red, colors.none, styles.underline)
-  Group.new("DiagnosticUnderlineWarn", colors.indian_yellow, colors.none, styles.underline)
-  Group.new("DiagnosticUnderlineInfo", colors.indian_blue, colors.none, styles.underline)
-  Group.new("DiagnosticUnderlineHint", colors.indian_green, colors.none, styles.underline)
+  Group.new("DiagnosticSignError", colors.b_red, colors.none, styles.bold)
+  Group.new("DiagnosticError", colors.b_red, colors.b_red_lt_03, styles.none)
+  Group.new("DiagnosticWarn", colors.b_yellow, colors.b_yellow_lt_04, styles.none)
+  Group.new("DiagnosticSignWarn", colors.b_yellow, colors.none, styles.bold)
+  Group.new("DiagnosticWARNReverse", colors.b_white, colors.b_yellow, styles.bold)
+  Group.new("DiagnosticInfo", colors.s_blue, colors.none, styles.none)
+  Group.new("DiagnosticSignInfo", colors.s_blue, colors.none, styles.none)
+  Group.new("DiagnosticHint", colors.b_green, colors.b_green_lt_05, styles.none)
+  Group.new("DiagnosticSignHint", colors.b_green, colors.none, styles.bold)
+  Group.new("MsgSeparator", colors.t_green, colors.none, styles.underline)
+  Group.new("DiagnosticUnderlineOk", colors.s_pink, colors.none, styles.underline)
+  Group.new("DiagnosticUnderlineError", colors.b_red, colors.none, styles.underline)
+  Group.new("DiagnosticUnderlineWarn", colors.b_yellow, colors.none, styles.underline)
+  Group.new("DiagnosticUnderlineInfo", colors.b_blue, colors.none, styles.underline)
+  Group.new("DiagnosticUnderlineHint", colors.b_green, colors.none, styles.underline)
   Group.link("DiagnosticVirtualTextHint", groups.Comment)
   Group.link("DiagnosticTextWarn", groups.WarningMsg)
 
@@ -575,15 +565,15 @@ function M.set_colors()
 
     -- Group.new("@variable", colors.base0)
     -- Group.link("@variable.builtin", groups.Special)
-    Group.new("@variable", colors.indian_blue, colors.none, styles.none)
-    Group.new("@variable.builtin", colors.indian_exp_blue, colors.none, styles.bold)
-    Group.new("@variable.parameter.builtin", colors.indian_exp_blue, colors.none, styles.bold)
-    Group.new("cType", colors.indian_light_cherry, colors.none, styles.none)
-    Group.new("cTypedef", colors.indian_light_green, colors.none, styles.none)
-    Group.new("cStructure", colors.indian_light_red:dark(), colors.none, styles.none)
+    Group.new("@variable", colors.b_blue, colors.none, styles.none)
+    Group.new("@variable.builtin", colors.s_blue, colors.none, styles.bold)
+    Group.new("@variable.parameter.builtin", colors.s_blue, colors.none, styles.bold)
+    Group.new("cType", colors.s_pink, colors.none, styles.none)
+    Group.new("cTypedef", colors.s_green, colors.none, styles.none)
+    Group.new("cStructure", colors.s_red_dk_01, colors.none, styles.none)
 
     -- Group.link("@constant", groups.Constant)
-    Group.new("@constant", colors.indian_purple, colors.none, styles.none)
+    Group.new("@constant", colors.b_violet, colors.none, styles.none)
     Group.link("@constant.builtin", groups.Type)
     Group.link("@constant.macro", groups.Define)
 
@@ -640,101 +630,152 @@ function M.set_colors()
     Group.link("@lsp.type.operator", groups.Operator)
 
     -- lualine
-    Group.new("LuaLineNormalA", colors.white, colors.indian_blue, styles.bold)
-    Group.new("LuaLineNormalB", colors.indian_light_black, colors.indian_exp_grey)
-    Group.new("LuaLineNormalC", colors.indian_blue, colors.none)
-    Group.new("LuaLineNormalY", colors.indian_light_black, colors.indian_exp_grey)
+    Group.new("LuaLineNormalA", colors.b_white, colors.b_blue, styles.bold)
+    Group.new("LuaLineNormalB", colors.b_black_lt_01, colors.b_grey)
+    Group.new("LuaLineNormalC", colors.b_blue, colors.none)
+    Group.new("LuaLineNormalY", colors.b_black_lt_01, colors.b_grey)
 
-    Group.new("LuaLineCommandA", colors.white, colors.indian_red, styles.bold)
-    Group.new("LuaLineInsertA", colors.white, colors.indian_green, styles.bold)
-    Group.new("LuaLineVisualA", colors.white, colors.indian_red, styles.bold)
-    Group.new("LuaLineReplaceA", colors.white, colors.indian_red, styles.bold)
+    Group.new("LuaLineCommandA", colors.b_white, colors.b_red, styles.bold)
+    Group.new("LuaLineInsertA", colors.b_white, colors.b_green, styles.bold)
+    Group.new("LuaLineVisualA", colors.b_white, colors.b_red, styles.bold)
+    Group.new("LuaLineReplaceA", colors.b_white, colors.b_red, styles.bold)
 
-    Group.new("LuaLineInactiveA", colors.white, colors.indian_exp_grey, styles.bold)
-    Group.new("LuaLineInactiveB", colors.indian_exp_grey, colors.none)
-    Group.new("LuaLineInactiveC", colors.indian_exp_grey, colors.none)
-    Group.new("LuaLineInactiveY", colors.indian_exp_grey, colors.none)
+    Group.new("LuaLineInactiveA", colors.b_white, colors.b_grey, styles.bold)
+    Group.new("LuaLineInactiveB", colors.b_grey, colors.none)
+    Group.new("LuaLineInactiveC", colors.b_grey, colors.none)
+    Group.new("LuaLineInactiveY", colors.b_grey, colors.none)
 
-    Group.new("LuaLineBufferActive", colors.indian_light_green, colors.none, styles.none)
-    Group.new("LuaLineBufferInactive", colors.indian_grey, colors.none, styles.none)
+    Group.new("LuaLineBufferActive", colors.s_green, colors.none, styles.none)
+    Group.new("LuaLineBufferInactive", colors.s_grey, colors.none, styles.none)
 
-    Group.new("lualine_x_diagnostics_info_terminal", colors.indian_exp_blue, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_info_inactive", colors.indian_exp_blue, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_info_replace", colors.indian_exp_blue, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_info_command", colors.indian_exp_blue, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_info_visual", colors.indian_exp_blue, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_info_normal", colors.indian_exp_blue, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_info_insert", colors.indian_exp_blue, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_info_terminal", colors.s_blue, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_info_inactive", colors.s_blue, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_info_replace", colors.s_blue, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_info_command", colors.s_blue, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_info_visual", colors.s_blue, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_info_normal", colors.s_blue, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_info_insert", colors.s_blue, colors.none, styles.none)
 
-    Group.new("lualine_x_diagnostics_error_terminal", colors.indian_red, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_error_inactive", colors.indian_red, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_error_replace", colors.indian_red, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_error_command", colors.indian_red, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_error_visual", colors.indian_red, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_error_normal", colors.indian_red, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_error_insert", colors.indian_red, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_error_terminal", colors.b_red, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_error_inactive", colors.b_red, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_error_replace", colors.b_red, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_error_command", colors.b_red, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_error_visual", colors.b_red, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_error_normal", colors.b_red, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_error_insert", colors.b_red, colors.none, styles.none)
 
-    Group.new("lualine_x_diagnostics_warn_terminal", colors.indian_yellow, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_warn_inactive", colors.indian_yellow, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_warn_replace", colors.indian_yellow, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_warn_command", colors.indian_yellow, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_warn_visual", colors.indian_yellow, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_warn_normal", colors.indian_yellow, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_warn_insert", colors.indian_yellow, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_warn_terminal", colors.b_yellow, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_warn_inactive", colors.b_yellow, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_warn_replace", colors.b_yellow, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_warn_command", colors.b_yellow, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_warn_visual", colors.b_yellow, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_warn_normal", colors.b_yellow, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_warn_insert", colors.b_yellow, colors.none, styles.none)
 
-    Group.new("lualine_x_diagnostics_hint_terminal", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_inactive", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_replace", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_command", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_visual", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_normal", colors.indian_green, colors.none, styles.none)
-    Group.new("lualine_x_diagnostics_hint_insert", colors.indian_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_terminal", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_inactive", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_replace", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_command", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_visual", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_normal", colors.b_green, colors.none, styles.none)
+    Group.new("lualine_x_diagnostics_hint_insert", colors.b_green, colors.none, styles.none)
 
     -- Group.new("PmenuKind", colors.none, colors.style, styles.none)
     -- Group.new("PmenuExtra", colors.none, colors.style, styles.none)
     -- indent plugin support
-    Group.new("IblScope", colors.indian_dark_green_2, colors.none, styles.none)
-    Group.new("IblIndent", colors.indian_exp_grey, colors.none, styles.none)
-    Group.new("SnacksIndent", colors.indian_exp_grey, colors.none, styles.none)
+    Group.new("IblScope", colors.s_green_dk_02, colors.none, styles.none)
+    Group.new("IblIndent", colors.b_grey, colors.none, styles.none)
+    Group.new("SnacksIndent", colors.b_grey, colors.none, styles.none)
 
     -- noice
-    Group.new("NoiceCmdlineIconLua", colors.white, colors.indian_blue:light(), styles.none)
-    Group.new("NoiceCmdlineIconSearch", colors.white, colors.indian_red, styles.none)
-    Group.new("NoiceCmdlineIconCmdline", colors.white, colors.indian_green, styles.none)
-    Group.new("NoiceCmdlineIconFilter", colors.white, colors.indian_dark_orange, styles.none)
-    Group.new("NoiceCursor", colors.none, colors.indian_dark_green_3, styles.none)
+    Group.new("NoiceCmdlineIconLua", colors.b_white, colors.b_blue_lt_01, styles.none)
+    Group.new("NoiceCmdlineIconSearch", colors.b_white, colors.b_red, styles.none)
+    Group.new("NoiceCmdlineIconCmdline", colors.b_white, colors.b_green, styles.none)
+    Group.new("NoiceCmdlineIconFilter", colors.b_white, colors.b_orange, styles.none)
+    Group.new("NoiceCursor", colors.none, colors.s_green_dk_01, styles.none)
     -- alpha
-    Group.new("AlphaHeader", colors.indian_light_green, colors.none, styles.none)
-    Group.new("AlphaButtons", colors.indian_dark_orange, colors.none, styles.none)
+    Group.new("AlphaHeader", colors.s_green, colors.none, styles.none)
+    Group.new("AlphaButtons", colors.b_orange, colors.none, styles.none)
     Group.new("AlphaShortcut", colors.indian_exp_grey_, colors.none, styles.none)
-    Group.new("AlphaFooter", colors.indian_red, colors.none, styles.none)
+    Group.new("AlphaFooter", colors.b_red, colors.none, styles.none)
     -- snacks
-    Group.new("SnacksDashboardHeader", colors.indian_green:dark(), colors.none, styles.bold)
-    Group.new("SnacksDashboardTitle", colors.indian_green, colors.none, styles.bold)
-    Group.new("SnacksDashboardIcon", colors.indian_green:dark(), colors.none, styles.none)
-    Group.new("SnacksDashboardDesc", colors.indian_blue:light(), colors.none, styles.none)
-    Group.new("SnacksDashboardKey", colors.indian_grey, colors.none, styles.none)
+    Group.new("SnacksDashboardHeader", colors.b_green_dk_01, colors.none, styles.bold)
+    Group.new("SnacksDashboardTitle", colors.b_green, colors.none, styles.bold)
+    Group.new("SnacksDashboardIcon", colors.b_green_dk_01, colors.none, styles.none)
+    Group.new("SnacksDashboardDesc", colors.b_blue_lt_01, colors.none, styles.none)
+    Group.new("SnacksDashboardKey", colors.s_grey, colors.none, styles.none)
     -- bufferline
-    Group.new("bufferlineIndicatorSelected", colors.indian_dark_orange, colors.none, styles.none)
-    Group.new("BufferLineSeparator", colors.indian_light_cherry, colors.none, styles.none)
-    Group.new("BufferlineIndicatorSelected", colors.indian_yellow, colors.none, styles.none)
-    Group.new("BufferLineTruncMarker", colors.white, colors.indian_light_cherry, styles.none)
-    Group.new("BufferLineModified", colors.indian_exp_green, colors.none, styles.none)
-    Group.new("BufferLineBufferSelected", colors.indian_light_cherry, colors.none, styles.bold)
+    Group.new("bufferlineIndicatorSelected", colors.b_orange, colors.none, styles.none)
+    Group.new("BufferLineSeparator", colors.s_pink, colors.none, styles.none)
+    Group.new("BufferlineIndicatorSelected", colors.b_yellow, colors.none, styles.none)
+    Group.new("BufferLineTruncMarker", colors.b_white, colors.s_pink, styles.none)
+    Group.new("BufferLineModified", colors.t_green, colors.none, styles.none)
+    Group.new("BufferLineBufferSelected", colors.s_pink, colors.none, styles.bold)
   end
 
   -- noice
-  Group.new("NoiceCmdlineIconHelp", colors.white, colors.indian_dark_orange, styles.none)
-  Group.new(
-    "NoiceFormatProgressDone",
-    colors.indian_green,
-    colors.indian_green:light():light():light():light():light(),
-    styles.None
-  )
+  Group.new("NoiceCmdlineIconHelp", colors.b_white, colors.b_orange, styles.none)
+  Group.new("NoiceFormatProgressDone", colors.b_green, colors.b_green_lt_05, styles.None)
 
   -- snacks
-  Group.new("SnacksNotifierBorderInfo", colors.indian_green:light(), colors.none, styles.none)
-  Group.new("SnacksNotifierTitleInfo", colors.indian_green:light(), colors.none, styles.none)
+  Group.new("SnacksNotifierBorderInfo", colors.b_green_lt_02, colors.none, styles.none)
+  Group.new("SnacksNotifierTitleInfo", colors.b_green_lt_02, colors.none, styles.none)
+
+  -- render
+  Group.new("RenderMarkdownCode", colors.none, colors.b_white, styles.none)
+
+  local auto_mode = os.getenv("AUTO_MODE")
+
+  if auto_mode == "Dark" then
+    -- snacks - indent
+    Group.new("SnacksIndent", colors.b_black_lt_02, colors.none, styles.none)
+
+    -- cursor
+    Group.new("CursorLine", colors.none, colors.b_black:dark(), styles.none)
+    Group.new("CursorLineNr", colors.b_yellow, colors.b_black:dark(), styles.none)
+
+    -- render
+    Group.new("RenderMarkdownCode", colors.none, colors.b_black, styles.none)
+    -- Group.new("RenderMarkdownCodeBullet", colors.none, colors.b_black, styles.none)
+    -- Group.new("RenderMarkdown_bgtofg_RenderMarkdownCode", colors.none, colors.b_black, styles.none)
+
+    -- diagnostic
+    -- Group.new("Warning", colors.b_yellow:light(), colors.none, styles.none)
+
+    -- nvim
+    -- Group.new("Visual", colors.none, colors.b_orange:light():light():light():light(), styles.none)
+    -- popmenu
+    Group.new("NormalFloat", colors.none, colors.none, styles.none)
+    -- pmenu
+    Group.new("Pmenu", colors.none, colors.b_black_lt_02, styles.None)
+    Group.new("PmenuSel", colors.s_green, colors.none, styles.bold)
+    Group.new("PmenuThumb", colors.t_grey, colors.s_grey, styles.None)
+    -- search
+    Group.new("IncSearch", colors.b_black, colors.b_red, styles.None)
+    Group.new("Search", colors.b_black, colors.b_yellow, styles.None)
+    -- Group.new("CurSearch", colors.noen, colors.b_yellow, styles.None)
+    --  visual
+    Group.new("Visual", colors.none, colors.b_black_lt_02, styles.none)
+    -- lualine
+    Group.new("LuaLineNormalA", colors.b_black_lt_01, colors.b_blue, styles.bold)
+    Group.new("LuaLineNormalB", colors.b_black_lt_01, colors.b_black_lt_02)
+    Group.new("LuaLineNormalC", colors.b_blue, colors.none)
+    Group.new("LuaLineNormalY", colors.b_black_lt_01, colors.b_black_lt_02)
+
+    Group.new("LuaLineCommandA", colors.b_black, colors.b_red, styles.bold)
+    Group.new("LuaLineInsertA", colors.b_black, colors.b_green, styles.bold)
+    Group.new("LuaLineVisualA", colors.b_black, colors.b_red, styles.bold)
+    Group.new("LuaLineReplaceA", colors.b_black, colors.b_red, styles.bold)
+
+    Group.new("LuaLineInactiveA", colors.b_black, colors.b_grey, styles.bold)
+
+    -- noice
+    --
+    Group.new("NoiceCmdlineIconSearch", colors.b_black, colors.b_red, styles.bold)
+    Group.new("NoiceCmdlineIconCmdline", colors.b_black, colors.b_green, styles.bold)
+    Group.new("NoiceCmdlineIconFilter", colors.b_black, colors.b_orange, styles.bold)
+    Group.new("NoiceCmdlineIconHelp", colors.b_black, colors.b_orange, styles.bold)
+  end
 
   function M.translate(group)
     if fn.has("nvim-0.6.0") == 0 then
