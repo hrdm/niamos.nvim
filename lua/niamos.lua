@@ -720,6 +720,8 @@ function M.set_colors()
   Group.new("SnacksNotifierBorderInfo", colors.b_green_lt_02, colors.none, styles.none)
   Group.new("SnacksNotifierTitleInfo", colors.b_green_lt_02, colors.none, styles.none)
 
+  -- render
+  Group.new("RenderMarkdownCode", colors.none, colors.b_white, styles.none)
   function M.translate(group)
     if fn.has("nvim-0.6.0") == 0 then
       return group
