@@ -72,6 +72,7 @@ function M.set_colors()
   Color.new("b_grey_lt_01", "#F0F0F0")
   Color.new("b_grey", "#e4e4e4")
   Color.new("b_white", "#ffffff")
+  Color.new("b_black_lt_02", "#444446")
   Color.new("b_black_lt_01", "#181a1c")
   Color.new("b_black", "#161618")
   Color.new("b_violet", "#7469B6")
@@ -722,6 +723,60 @@ function M.set_colors()
 
   -- render
   Group.new("RenderMarkdownCode", colors.none, colors.b_white, styles.none)
+
+  local auto_mode = os.getenv("AUTO_MODE")
+
+  if auto_mode == "Dark" then
+    -- snacks - indent
+    Group.new("SnacksIndent", colors.b_black_lt_02, colors.none, styles.none)
+
+    -- cursor
+    Group.new("CursorLine", colors.none, colors.b_black:dark(), styles.none)
+    Group.new("CursorLineNr", colors.b_yellow, colors.b_black:dark(), styles.none)
+
+    -- render
+    Group.new("RenderMarkdownCode", colors.none, colors.b_black, styles.none)
+    -- Group.new("RenderMarkdownCodeBullet", colors.none, colors.b_black, styles.none)
+    -- Group.new("RenderMarkdown_bgtofg_RenderMarkdownCode", colors.none, colors.b_black, styles.none)
+
+    -- diagnostic
+    -- Group.new("Warning", colors.b_yellow:light(), colors.none, styles.none)
+
+    -- nvim
+    -- Group.new("Visual", colors.none, colors.b_orange:light():light():light():light(), styles.none)
+    -- popmenu
+    Group.new("NormalFloat", colors.none, colors.none, styles.none)
+    -- pmenu
+    Group.new("Pmenu", colors.none, colors.b_black_lt_02, styles.None)
+    Group.new("PmenuSel", colors.s_green, colors.none, styles.bold)
+    Group.new("PmenuThumb", colors.t_grey, colors.s_grey, styles.None)
+    -- search
+    Group.new("IncSearch", colors.b_black, colors.b_red, styles.None)
+    Group.new("Search", colors.b_black, colors.b_yellow, styles.None)
+    -- Group.new("CurSearch", colors.noen, colors.b_yellow, styles.None)
+    --  visual
+    Group.new("Visual", colors.none, colors.b_black_lt_02, styles.none)
+    -- lualine
+    Group.new("LuaLineNormalA", colors.b_black_lt_01, colors.b_blue, styles.bold)
+    Group.new("LuaLineNormalB", colors.b_black_lt_01, colors.b_black_lt_02)
+    Group.new("LuaLineNormalC", colors.b_blue, colors.none)
+    Group.new("LuaLineNormalY", colors.b_black_lt_01, colors.b_black_lt_02)
+
+    Group.new("LuaLineCommandA", colors.b_black, colors.b_red, styles.bold)
+    Group.new("LuaLineInsertA", colors.b_black, colors.b_green, styles.bold)
+    Group.new("LuaLineVisualA", colors.b_black, colors.b_red, styles.bold)
+    Group.new("LuaLineReplaceA", colors.b_black, colors.b_red, styles.bold)
+
+    Group.new("LuaLineInactiveA", colors.b_black, colors.b_grey, styles.bold)
+
+    -- noice
+    --
+    Group.new("NoiceCmdlineIconSearch", colors.b_black, colors.b_red, styles.bold)
+    Group.new("NoiceCmdlineIconCmdline", colors.b_black, colors.b_green, styles.bold)
+    Group.new("NoiceCmdlineIconFilter", colors.b_black, colors.b_orange, styles.bold)
+    Group.new("NoiceCmdlineIconHelp", colors.b_black, colors.b_orange, styles.bold)
+  end
+
   function M.translate(group)
     if fn.has("nvim-0.6.0") == 0 then
       return group
