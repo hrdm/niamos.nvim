@@ -5,6 +5,7 @@ local config = {
   comment_italics = true,
   background_set = false,
   background_color = require("colorbuddy.init").Color.none,
+  auto_mode = "light",
 }
 
 local M = {
@@ -724,15 +725,13 @@ function M.set_colors()
   -- render
   Group.new("RenderMarkdownCode", colors.none, colors.b_white, styles.none)
 
-  local auto_mode = os.getenv("AUTO_MODE")
-
-  if auto_mode == "Dark" then
+  if config.auto_mode == "Dark" then
     -- snacks - indent
     Group.new("SnacksIndent", colors.b_black_lt_02, colors.none, styles.none)
 
     -- cursor
-    Group.new("CursorLine", colors.none, colors.b_black:dark(), styles.none)
-    Group.new("CursorLineNr", colors.b_yellow, colors.b_black:dark(), styles.none)
+    Group.new("CursorLine", colors.none, colors.none, styles.none)
+    Group.new("CursorLineNr", colors.b_yellow, colors.none, styles.none)
 
     -- render
     Group.new("RenderMarkdownCode", colors.none, colors.b_black, styles.none)
