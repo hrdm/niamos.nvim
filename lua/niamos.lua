@@ -110,6 +110,10 @@ function M.set_colors()
   Color.new("x_dark_blue", "#1931f1")
   Color.new("x_dark_orange", "#be5a23")
   Color.new("x_light_green", "#4f913f")
+  Color.new("x_dark_purple", "#10206b")
+  Color.new("x_light_blue", "#effafd")
+  Color.new("x_dark_blue2", "#3377d7")
+  Color.new("x_light_purple", "#8d4faf")
 
   Group.new("Error", colors.red)
   Group.new("Warning", colors.yellow)
@@ -228,8 +232,8 @@ function M.set_colors()
   Group.new("TabLineMod", colors.b_red, colors.none, styles.bold) -- modified tab not selected
 
   Group.new("LineNr", colors.s_grey, colors.none, styles.none)
-  Group.new("CursorLine", colors.none, colors.b_grey_lt_03, styles.none)
-  Group.new("CursorLineNr", colors.b_yellow, colors.b_grey_lt_03, styles.none)
+  Group.new("CursorLine", colors.none, colors.x_light_blue, styles.none)
+  Group.new("CursorLineNr", colors.x_dark_purple, colors.x_light_blue, styles.none)
 
   Group.new("ColorColumn", colors.none, colors.base02, styles.NONE)
   Group.new("Cursor", colors.base03, colors.base0, styles.NONE)
@@ -794,6 +798,10 @@ function M.set_colors()
     Group.new("NoiceCmdlineIconFilter", colors.b_black, colors.b_orange, styles.bold)
     Group.new("NoiceCmdlineIconHelp", colors.b_black, colors.b_orange, styles.bold)
   end
+
+  -- lua files
+  Group.new("@lsp.type.variable.lua", colors.x_dark_blue2, colors.none, styles.none)
+  Group.new("@lsp.type.property.lua", colors.x_light_purple, colors.none, styles.none)
 
   function M.translate(group)
     if fn.has("nvim-0.6.0") == 0 then
