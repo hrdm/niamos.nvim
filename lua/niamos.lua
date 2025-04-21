@@ -156,7 +156,7 @@ function M.set_colors()
   Group.new("Text", colors.cyan)
   Group.new("String", colors.t_green, colors.none, styles.none)
   Group.new("NonText", colors.base00, colors.none, styles.bold)
-  Group.new("StatusLine", colors.s_grey_dk_01, colors.none, styles.undercurl)
+  Group.new("StatusLine", colors.s_grey_dk_01, colors.none, styles.none)
   Group.new("StatusLineNC", colors.base00, colors.base02, styles.reverse)
   Group.new("Visual", colors.none, colors.s_orange_lt_02, styles.none)
 
