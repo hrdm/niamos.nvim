@@ -730,6 +730,7 @@ function M.set_colors()
     Group.new("SnacksIndent", colors.b_black_lt_02, colors.none, styles.none)
 
     -- cursor
+    Group.new("LineNr", colors.b_black_lt_02, colors.none, styles.none)
     Group.new("CursorLine", colors.none, colors.none, styles.none)
     Group.new("CursorLineNr", colors.b_yellow, colors.none, styles.none)
 
