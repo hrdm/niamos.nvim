@@ -775,6 +775,18 @@ function M.set_colors()
     Group.new("NoiceCmdlineIconCmdline", colors.b_black, colors.b_green, styles.bold)
     Group.new("NoiceCmdlineIconFilter", colors.b_black, colors.b_orange, styles.bold)
     Group.new("NoiceCmdlineIconHelp", colors.b_black, colors.b_orange, styles.bold)
+
+    -- git diff
+    Group.new("DiffAdd", colors.b_green, colors.none, styles.none)
+    Group.new("DiffChange", colors.b_yellow, colors.none, styles.none)
+    Group.new("DiffDelete", colors.b_red, colors.none, styles.none)
+    Group.new("DiffText", colors.b_blue_lt_01, colors.none, styles.bold)
+
+    Group.new("Folded", colors.s_grey, colors.b_black_lt_02, styles.none)
+
+    Group.new("IncSearch", colors.b_red, colors.none, styles.none)
+    Group.new("CurSearch", colors.b_red, colors.none, styles.None)
+    -- Group.new("FzfLuaScrollFloatFull", colors.b_red, colors.none, styles.None)
   end
 
   function M.translate(group)
