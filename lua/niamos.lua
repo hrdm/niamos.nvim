@@ -63,6 +63,7 @@ function M.set_colors()
   Color.new("b_green_dk_01", "#2f7573")
   Color.new("b_yellow_lt_04", "#fff9e5")
   Color.new("b_yellow", "#faba00")
+  Color.new("b_yellow_dk_06", "#644a00")
   Color.new("b_orange", "#ffaf5f")
   Color.new("b_red_lt_03", "#fff8f8")
   Color.new("b_red_lt_02", "#ffc5c5")
@@ -787,6 +788,8 @@ function M.set_colors()
     Group.new("IncSearch", colors.b_red, colors.none, styles.none)
     Group.new("CurSearch", colors.b_red, colors.none, styles.None)
     -- Group.new("FzfLuaScrollFloatFull", colors.b_red, colors.none, styles.None)
+
+    Group.new("Warning", colors.b_yellow_dk_06)
   end
 
   function M.translate(group)
