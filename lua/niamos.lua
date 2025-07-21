@@ -740,9 +740,6 @@ function M.set_colors()
     -- Group.new("RenderMarkdownCodeBullet", colors.none, colors.b_black, styles.none)
     -- Group.new("RenderMarkdown_bgtofg_RenderMarkdownCode", colors.none, colors.b_black, styles.none)
 
-    -- diagnostic
-    -- Group.new("Warning", colors.b_yellow:light(), colors.none, styles.none)
-
     -- nvim
     -- Group.new("Visual", colors.none, colors.b_orange:light():light():light():light(), styles.none)
     -- popmenu
@@ -789,7 +786,9 @@ function M.set_colors()
     Group.new("CurSearch", colors.b_red, colors.none, styles.None)
     -- Group.new("FzfLuaScrollFloatFull", colors.b_red, colors.none, styles.None)
 
+    -- diagnostic
     Group.new("Warning", colors.b_yellow_dk_06)
+    Group.new("DiagnosticSignWarn", colors.b_yellow_dk_06, colors.none, styles.bold)
   end
 
   function M.translate(group)
