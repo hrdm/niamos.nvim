@@ -689,12 +689,11 @@ function M.set_colors()
     Group.new("IblIndent", colors.b_grey, colors.none, styles.none)
     Group.new("SnacksIndent", colors.b_grey, colors.none, styles.none)
 
-    -- noice
-    Group.new("NoiceCmdlineIconLua", colors.b_white, colors.b_blue_lt_01, styles.none)
-    Group.new("NoiceCmdlineIconSearch", colors.b_white, colors.b_red, styles.none)
-    Group.new("NoiceCmdlineIconCmdline", colors.b_white, colors.b_green, styles.none)
-    Group.new("NoiceCmdlineIconFilter", colors.b_white, colors.b_orange, styles.none)
-    Group.new("NoiceCursor", colors.none, colors.s_green_dk_01, styles.none)
+    -- Group.new("NoiceCmdlineIconLua", colors.b_white, colors.b_blue_lt_01, styles.none)
+    -- Group.new("NoiceCmdlineIconSearch", colors.b_white, colors.b_red, styles.none)
+    -- Group.new("NoiceCmdlineIconCmdline", colors.b_white, colors.b_green, styles.none)
+    -- Group.new("NoiceCmdlineIconFilter", colors.b_white, colors.b_orange, styles.none)
+    -- Group.new("NoiceCursor", colors.none, colors.s_green_dk_01, styles.none)
     -- alpha
     Group.new("AlphaHeader", colors.s_green, colors.none, styles.none)
     Group.new("AlphaButtons", colors.b_orange, colors.none, styles.none)
@@ -716,7 +715,19 @@ function M.set_colors()
   end
 
   -- noice
-  Group.new("NoiceCmdlineIconHelp", colors.b_white, colors.b_orange, styles.none)
+  Group.new("NoiceCmdlinePopupBorderLua", colors.b_blue_lt_01, colors.none, styles.none)
+  Group.new("NoiceCmdlinePopupBorderSearch", colors.b_red, colors.none, styles.none)
+  Group.new("NoiceCmdlinePopupBorderCmdline", colors.b_green, colors.none, styles.none)
+  Group.new("NoiceCmdlinePopupBorderHelp", colors.b_orange, colors.none, styles.none)
+  Group.new("NoiceCmdlinePopupBorderFilter", colors.b_orange, colors.none, styles.none)
+
+  Group.new("NoiceCmdlineIconLua", colors.b_blue_lt_01, colors.none, styles.none)
+  Group.new("NoiceCmdlineIconSearch", colors.b_red, colors.none, styles.none)
+  Group.new("NoiceCmdlineIconCmdline", colors.b_green, colors.none, styles.none)
+  Group.new("NoiceCmdlineIconFilter", colors.b_orange, colors.none, styles.none)
+  Group.new("NoiceCmdlineIconHelp", colors.b_orange, colors.none, styles.none)
+  Group.new("NoiceCursor", colors.none, colors.s_green_dk_01, styles.none)
+
   Group.new("NoiceFormatProgressDone", colors.b_green, colors.b_green_lt_05, styles.None)
 
   -- snacks
@@ -726,7 +737,16 @@ function M.set_colors()
   -- render
   Group.new("RenderMarkdownCode", colors.none, colors.b_white, styles.none)
 
+  -- Dark mode
   if config.auto_mode == "Dark" then
+    -- noice
+    Group.new("NoiceCmdlineIconLua", colors.b_blue_lt_01, colors.none, styles.none)
+    Group.new("NoiceCmdlineIconSearch", colors.b_red, colors.none, styles.none)
+    Group.new("NoiceCmdlineIconCmdline", colors.b_green, colors.none, styles.none)
+    Group.new("NoiceCmdlineIconFilter", colors.b_orange, colors.none, styles.none)
+    Group.new("NoiceCmdlineIconHelp", colors.b_orange, colors.none, styles.none)
+    Group.new("ErrorMsg", colors.b_red, colors.none, styles.none)
+
     -- snacks - indent
     Group.new("SnacksIndent", colors.b_black_lt_02, colors.none, styles.none)
 
@@ -769,10 +789,10 @@ function M.set_colors()
 
     -- noice
     --
-    Group.new("NoiceCmdlineIconSearch", colors.b_black, colors.b_red, styles.bold)
-    Group.new("NoiceCmdlineIconCmdline", colors.b_black, colors.b_green, styles.bold)
-    Group.new("NoiceCmdlineIconFilter", colors.b_black, colors.b_orange, styles.bold)
-    Group.new("NoiceCmdlineIconHelp", colors.b_black, colors.b_orange, styles.bold)
+    -- Group.new("NoiceCmdlineIconSearch", colors.b_black, colors.b_red, styles.bold)
+    -- Group.new("NoiceCmdlineIconCmdline", colors.b_black, colors.b_green, styles.bold)
+    -- Group.new("NoiceCmdlineIconFilter", colors.b_black, colors.b_orange, styles.bold)
+    -- Group.new("NoiceCmdlineIconHelp", colors.b_black, colors.b_orange, styles.bold)
 
     -- git diff
     Group.new("DiffAdd", colors.b_green, colors.none, styles.none)
