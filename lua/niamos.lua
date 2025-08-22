@@ -214,6 +214,7 @@ function M.set_colors()
 
   Group.new("TabLineSep", colors.b_blue, colors.none, styles.none) -- right separator
   Group.new("TabLineSep2", colors.none, colors.b_blue, styles.reverse) -- left separator
+  Group.new("TabLineSep4", colors.b_blue, colors.none, styles.reverse) -- left separator
   Group.new("TabLineSelMod", colors.yellow, colors.b_blue, styles.bold) -- modified tab
   Group.new("TabLineMod", colors.b_red, colors.none, styles.bold) -- modified tab not selected
 
@@ -750,6 +751,8 @@ function M.set_colors()
     -- snacks - indent
     Group.new("SnacksIndent", colors.b_black_lt_02, colors.none, styles.none)
 
+    Group.new("FylerIndentMarker", colors.b_black_lt_02, colors.none, styles.none)
+
     -- cursor
     Group.new("LineNr", colors.b_black_lt_02, colors.none, styles.none)
     Group.new("CursorLine", colors.none, colors.none, styles.none)
@@ -809,6 +812,9 @@ function M.set_colors()
     -- diagnostic
     Group.new("Warning", colors.b_yellow_dk_06)
     Group.new("DiagnosticSignWarn", colors.b_yellow_dk_06, colors.none, styles.bold)
+
+    -- tabline
+    Group.new("TabLineSep4", colors.b_blue, colors.black, styles.reverse) -- left separator
   end
 
   function M.translate(group)
