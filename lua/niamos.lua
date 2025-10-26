@@ -65,6 +65,7 @@ function M.set_colors()
   Color.new("b_yellow", "#faba00")
   Color.new("b_yellow_dk_06", "#644a00")
   Color.new("b_orange", "#ffaf5f")
+  Color.new("b_orange_lt", "#ffefdf")
   Color.new("b_red_lt_03", "#fff8f8")
   Color.new("b_red_lt_02", "#ffc5c5")
   Color.new("b_red", "#ff5f5f")
@@ -737,6 +738,9 @@ function M.set_colors()
 
   -- render
   Group.new("RenderMarkdownCode", colors.none, colors.b_white, styles.none)
+  Group.new("RenderMarkdownH3Bg", colors.t_grey, colors.s_grey_lt_02, styles.None)
+  Group.new("@markup.strong.markdown_inline", colors.b_black, colors.none, styles.bold)
+  Group.new("@markup.heading.markdown", colors.b_red, colors.none, styles.bold)
 
   -- Dark mode
   if config.auto_mode == "Dark" then
