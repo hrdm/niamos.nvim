@@ -777,7 +777,7 @@ function M.set_colors()
     Group.new("PmenuThumb", colors.t_grey, colors.s_grey, styles.None)
     -- search
     Group.new("IncSearch", colors.b_black, colors.b_red, styles.None)
-    Group.new("Search", colors.b_black, colors.b_yellow, styles.None)
+    Group.new("Search", colors.b_yellow, colors.b_black, styles.undercurl)
     -- Group.new("CurSearch", colors.noen, colors.b_yellow, styles.None)
     --  visual
     Group.new("Visual", colors.none, colors.b_black_lt_02, styles.none)
