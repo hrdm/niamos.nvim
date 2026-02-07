@@ -102,7 +102,6 @@ function M.set_colors()
   Color.new("t_grey_lt_01", "#667375")
   Color.new("t_grey", "#4e585a")
 
-  Group.new("Error", colors.red)
   Group.new("Warning", colors.yellow)
   Group.new("Information", colors.blue)
   Group.new("Hint", colors.cyan)
@@ -188,8 +187,6 @@ function M.set_colors()
   Group.new("DiffDelete", colors.b_red, colors.b_red_lt_03, styles.none)
   Group.new("DiffText", colors.b_blue, colors.b_blue_lt_04, styles.bold)
   Group.new("DiffviewFilePanelSelected", colors.b_red, colors.none, styles.none)
-  Group.new("NeoTreeNormal", colors.t_grey, colors.b_grey_lt_01, styles.NONE)
-  Group.new("NeoTreeNormalNC", colors.t_grey, colors.b_grey_lt_01, styles.NONE)
 
   Group.new("SignColumn", colors.base0, colors.none, styles.NONE)
   Group.new("Conceal", colors.blue, colors.none, styles.NONE)
@@ -299,41 +296,7 @@ function M.set_colors()
   Group.link("diffAdded", groups.Statement)
   Group.link("diffLine", groups.Identifier)
 
-  Group.new("NeomakeErrorSign", colors.orange)
-  Group.new("NeomakeWarningSign", colors.yellow)
-  Group.new("NeomakeMessageSign", colors.cyan)
-  Group.new("NeomakeNeomakeInfoSign", colors.green)
-
-  Group.new("CmpItemKind", colors.green)
-  Group.new("CmpItemMenu", groups.NormalNC)
-  Group.new("CmpItemAbbr", colors.t_grey, colors.none, styles.none)
-  Group.new("CmpItemAbbrMatch", colors.b_green, colors.b_green_lt_05, styles.None)
-  Group.new("CmpItemKindText", colors.b_orange, colors.none, styles.none)
-  Group.new("CmpItemKindMethod", colors.green, colors.none, styles.none)
-  Group.new("CmpItemKindFunction", colors.blue, colors.none, styles.none)
-  Group.new("CmpItemKindConstructor", colors.orange, colors.none, styles.none)
-  Group.new("CmpItemKindField", colors.yellow, colors.none, styles.none)
-  Group.new("CmpItemKindVariable", colors.orange, colors.none, styles.none)
-  Group.new("CmpitemKindClass", colors.yellow, colors.none, styles.none)
-  Group.new("CmpItemKindInterface", colors.yellow, colors.none, styles.none)
-  Group.new("CmpItemKindModule", colors.green, colors.none, styles.none)
-  Group.new("CmpItemKindProperty", colors.green, colors.none, styles.none)
-  Group.new("CmpItemKindUnit", colors.orange, colors.none, styles.none)
-  Group.new("CmpItemKindValue", colors.cyan, colors.none, styles.none)
-  Group.new("CmpItemKindEnum", colors.yellow, colors.none, styles.none)
-  Group.new("CmpItemKindKeyword", colors.green, colors.none, styles.none)
-  Group.new("CmpItemKindSnippet", colors.magenta, colors.none, styles.none)
-  Group.new("CmpItemKindColor", colors.magenta, colors.none, styles.none)
-  Group.new("CmpItemKindFile", colors.violet, colors.none, styles.none)
-  Group.new("CmpItemKindReference", colors.violet, colors.none, styles.none)
-  Group.new("CmpItemKindFolder", colors.violet, colors.none, styles.none)
-  Group.new("CmpItemKindEnumMember", colors.cyan, colors.none, styles.none)
-  Group.new("CmpItemKindConstant", colors.cyan, colors.none, styles.none)
-  Group.new("CmpItemKindStruct", colors.yellow, colors.none, styles.none)
-  Group.new("CmpItemKindEvent", colors.orange, colors.none, styles.none)
-  Group.new("CmpItemKindOperator", colors.cyan, colors.none, styles.none)
-  Group.new("CmpItemKindTypeParameter", colors.orange, colors.none, styles.none)
-
+  -- LspSaga
   Group.new("LspSagaCodeActionTitle", colors.green)
   Group.new("LspSagaBorderTitle", colors.yellow, colors.none, styles.bold)
   Group.new("LspSagaDiagnosticHeader", colors.yellow)
@@ -348,15 +311,12 @@ function M.set_colors()
   Group.new("LspSagaCodeActionBorder", groups.LspSagaHoverBorder)
   Group.new("LspSagaLspFinderBorder", colors.b_blue, colors.none, styles.none)
   Group.new("LspSagaFloatWinBorder", groups.LspSagaHoverBorder)
-  Group.new("LspSagaSignatureHelpBorder", groups.LspSagaHoverBorder)
   Group.new("LspSagaDefPreviewBorder", groups.LspSagaHoverBorder)
-  -- Group.new("LspSagaAutoPreviewBorder", groups.LspSagaHoverBorder)
   Group.new("LspSagaAutoPreview", colors.b_red, colors.b_red_lt_03, styles.bold)
 
   Group.new("LspFloatWinBorder", groups.LspSagaHoverBorder)
   Group.new("LspLinesDiagBorder", groups.LspSagaHoverBorder)
   Group.new("LspSagaFinderSelection", colors.b_green, colors.none, styles.bold)
-  --Group.new('SagaShadow', colors.base02)
 
   Group.new("SagaNormal", colors.none, colors.none, styles.none)
   Group.new("SagaBorder", colors.b_orange, colors.none, styles.none)
@@ -381,17 +341,7 @@ function M.set_colors()
   Group.new("DevIconPy", colors.b_yellow, colors.none, styles.none)
   Group.new("DevIconLua", colors.b_blue, colors.none, styles.none)
 
-  Group.new("TelescopeMatching", colors.b_red, colors.b_red_lt_03, styles.none)
-  Group.new("TelescopePreviewMatch", colors.b_green, colors.b_green_lt_05, styles.none)
-  Group.new("TelescopeBorder", colors.base01) -- float border not quite dark enough, maybe that needs to change?
-  Group.new("TelescopePromptBorder", colors.cyan) -- active border lighter for clarity
-  Group.new("TelescopeTitle", groups.Normal) -- separate them from the border a little, but not make them pop
-  Group.new("TelescopePromptPrefix", groups.Normal) -- default is groups.Identifier
-  Group.link("TelescopeSelection", groups.CursorLine)
-  Group.new("TelescopeSelectionCaret", colors.cyan)
-  Group.new("TelescopeResultsBorder", colors.b_green, colors.none, styles.none)
-  Group.new("TelescopePreviewBorder", colors.b_red, colors.b_red_lt_03, styles.none)
-
+  -- Neogit
   Group.new("NeogitDiffAddHighlight", colors.green, colors.base02)
   Group.new("NeogitDiffDeleteHighlight", colors.red, colors.base02)
   Group.new("NeogitHunkHeader", groups.Normal, colors.base02)
@@ -413,70 +363,11 @@ function M.set_colors()
   Group.new("BqfPreviewBorder", colors.base01)
   Group.new("BqfSign", colors.cyan)
 
-  -- Primeagen/harpoon
-  Group.new("HarpoonBorder", colors.cyan)
-  Group.new("HarpoonWindow", groups.Normal)
-
-  -- nvim-tree/nvim-tree.lua
-  Group.new("NvimTreeFolderIcon", colors.blue)
-  Group.new("NvimTreeRootFolder", colors.orange)
-  Group.new("NvimTreeImageFile", colors.orange)
-  Group.new("NvimTreeSpecialFile", colors.orange, colors.none, styles.bold + styles.underline)
-
-  -- phaazon/hop.nvim
-  Group.link("HopNextKey", groups.IncSearch)
-  Group.link("HopNextKey1", groups.IncSearch)
-  Group.link("HopNextKey2", groups.IncSearch)
-
-  -- https://github.com/j-hui/fidget.nvim (for some reason the background
-  -- is only correct if used with background_set = true) even when set below)
+  -- j-hui/fidget.nvim
   Group.new("FidgetTitle", colors.magenta)
   Group.new("FidgetTask", colors.base0)
 
-  -- TreeSitter
-  Group.link("TSBoolean", groups.Constant)
-  Group.link("TSCharacter", groups.Constant)
-  Group.link("TSComment", groups.Comment)
-  Group.link("TSConditional", groups.Conditional)
-  Group.link("TSConstant", groups.Constant)
-  Group.link("TSConstBuiltin", groups.Constant)
-  Group.link("TSConstMacro", groups.Constant)
-  Group.link("TSError", groups.Error)
-  Group.link("TSException", groups.Exception)
-  Group.link("TSField", groups.Identifier)
-  Group.link("TSFloat", groups.Constant)
-  Group.link("TSFunction", groups.Function)
-  Group.link("TSFuncBuiltin", groups.Function)
-  Group.link("TSFuncMacro", groups.Function)
-  Group.link("TSInclude", groups.Include)
-  Group.link("TSKeyword", groups.Keyword)
-  Group.link("TSLabel", groups.Statement)
-  Group.link("TSMethod", groups.Function)
-  Group.link("TSNamespace", groups.Identifier)
-  Group.link("TSNumber", groups.Constant)
-  Group.link("TSOperator", groups.Operator)
-  Group.link("TSParameterReference", groups.Identifier)
-  Group.link("TSProperty", groups.TSField)
-  Group.link("TSPunctDelimiter", groups.Delimiter)
-  Group.link("TSPunctBracket", groups.Delimiter)
-  Group.link("TSPunctSpecial", groups.Special)
-  Group.link("TSRepeat", groups.Repeat)
-  Group.link("TSString", groups.Constant)
-  Group.link("TSStringRegex", groups.Constant)
-  Group.link("TSStringEscape", groups.Constant)
-  Group.new("TSStrong", colors.base1, colors.none, styles.bold)
-  Group.link("TSConstructor", groups.Function)
-  Group.link("TSKeywordFunction", groups.Identifier)
-  Group.new("TSLiteral", groups.Normal)
-  Group.link("TSParameter", groups.Identifier)
-  Group.link("TSVariable", groups.Normal)
-  Group.link("TSVariableBuiltin", groups.Identifier)
-  Group.link("TSTag", groups.Special)
-  Group.link("TSTagDelimiter", groups.Delimiter)
-  Group.link("TSTitle", groups.Title)
-  Group.new("TSType", colors.s_red, colors.none, styles.NONE)
-  Group.new("TSTypeBuiltin", colors.s_red, colors.none, styles.NONE)
-
+  -- Diagnostics
   Group.new("DiagnosticSignError", colors.b_red, colors.none, styles.bold)
   Group.new("DiagnosticError", colors.b_red, colors.b_red_lt_03, styles.none)
   Group.new("DiagnosticWarn", colors.b_yellow, colors.b_yellow_lt_04, styles.none)
@@ -499,11 +390,7 @@ function M.set_colors()
   Group.link("LspReferenceText", groups.LspReferenceRead)
   Group.new("LspReferenceWrite", colors.none, colors.none, styles.underline)
 
-  -- folke/which-key.nvim
-  Group.new("WhichKeySeparator", colors.base01, colors.base02, styles.bold)
-  Group.new("WhichKeyDesc", colors.cyan, colors.base02)
-
-  -- group names with an ampersand throw an error until they gain support in 0.8.0
+  -- TreeSitter (@-prefixed)
   if fn.has("nvim-0.8.0") ~= 0 then
     -- XML-like tags
     Group.new("@tag", colors.green)
@@ -542,7 +429,6 @@ function M.set_colors()
     Group.link("@method.call", groups.Function)
 
     Group.link("@constructor", groups.Special)
-    -- not sure about this one, special is true and kinda nice?
     Group.link("@parameter", groups.Special)
 
     Group.link("@keyword", groups.Keyword)
@@ -567,8 +453,6 @@ function M.set_colors()
     Group.link("@field", groups.Identifier)
     Group.link("@property", groups.Identifier)
 
-    -- Group.new("@variable", colors.base0)
-    -- Group.link("@variable.builtin", groups.Special)
     Group.new("@variable", colors.b_blue, colors.none, styles.none)
     Group.new("@variable.builtin", colors.s_blue, colors.none, styles.bold)
     Group.new("@variable.parameter.builtin", colors.s_blue, colors.none, styles.bold)
@@ -576,7 +460,6 @@ function M.set_colors()
     Group.new("cTypedef", colors.s_green, colors.none, styles.none)
     Group.new("cStructure", colors.s_red_dk_01, colors.none, styles.none)
 
-    -- Group.link("@constant", groups.Constant)
     Group.new("@constant", colors.b_violet, colors.none, styles.none)
     Group.link("@constant.builtin", groups.Type)
     Group.link("@constant.macro", groups.Define)
@@ -601,12 +484,11 @@ function M.set_colors()
     Group.link("@text.note", groups.Comment)
     Group.link("@text.warning", groups.WarningMsg)
     Group.new("@text.danger", colors.red, colors.none, styles.bold)
+
     Group.new("NoiceCmdlinePopupBorder", colors.cyan)
     Group.new("NoiceConfirmBorder", colors.cyan)
-    Group.new("NoiceCmdlinePopupBorderSearch", colors.cyan)
     Group.new("NoiceCmdlinePopupTitle", colors.base0)
     Group.new("NoiceCmdlinePrompt", colors.base0)
-    Group.new("NoiceCmdlineIconSearch", colors.base0)
     Group.new("NoiceCmdlineIcon", colors.base0)
     Group.new("NoiceFormatTitle", colors.base0)
   end
@@ -619,18 +501,18 @@ function M.set_colors()
     Group.link("@lsp.type.struct", groups.Type)
     Group.link("@lsp.type.typeParameter", groups.Type)
     Group.link("@lsp.type.parameter", groups.Special)
-    Group.link("@lsp.type.variable", groups.TSVariable)
-    Group.link("@lsp.type.property", groups.TSProperty)
-    Group.link("@lsp.type.enumMember", groups.TSProperty)
+    Group.link("@lsp.type.variable", groups.Normal)
+    Group.link("@lsp.type.property", groups.Identifier)
+    Group.link("@lsp.type.enumMember", groups.Identifier)
     Group.link("@lsp.type.events", groups.Label)
     Group.link("@lsp.type.function", groups.Function)
-    Group.link("@lsp.type.method", groups.TSMethod)
+    Group.link("@lsp.type.method", groups.Function)
     Group.link("@lsp.type.keyword", groups.Keyword)
     Group.link("@lsp.type.modifier", groups.Operator)
     Group.link("@lsp.type.comment", groups.Comment)
     Group.link("@lsp.type.string", groups.String)
     Group.link("@lsp.type.number", groups.Number)
-    Group.link("@lsp.type.regexp", groups.TSStringRegex)
+    Group.link("@lsp.type.regexp", groups.Constant)
     Group.link("@lsp.type.operator", groups.Operator)
 
     -- lualine
@@ -684,36 +566,17 @@ function M.set_colors()
     Group.new("lualine_x_diagnostics_hint_normal", colors.b_green, colors.none, styles.none)
     Group.new("lualine_x_diagnostics_hint_insert", colors.b_green, colors.none, styles.none)
 
-    -- Group.new("PmenuKind", colors.none, colors.style, styles.none)
-    -- Group.new("PmenuExtra", colors.none, colors.style, styles.none)
     -- indent plugin support
     Group.new("IblScope", colors.s_green_dk_02, colors.none, styles.none)
     Group.new("IblIndent", colors.b_grey, colors.none, styles.none)
     Group.new("SnacksIndent", colors.b_grey, colors.none, styles.none)
 
-    -- Group.new("NoiceCmdlineIconLua", colors.b_white, colors.b_blue_lt_01, styles.none)
-    -- Group.new("NoiceCmdlineIconSearch", colors.b_white, colors.b_red, styles.none)
-    -- Group.new("NoiceCmdlineIconCmdline", colors.b_white, colors.b_green, styles.none)
-    -- Group.new("NoiceCmdlineIconFilter", colors.b_white, colors.b_orange, styles.none)
-    -- Group.new("NoiceCursor", colors.none, colors.s_green_dk_01, styles.none)
-    -- alpha
-    Group.new("AlphaHeader", colors.s_green, colors.none, styles.none)
-    Group.new("AlphaButtons", colors.b_orange, colors.none, styles.none)
-    Group.new("AlphaShortcut", colors.indian_exp_grey_, colors.none, styles.none)
-    Group.new("AlphaFooter", colors.b_red, colors.none, styles.none)
-    -- snacks
+    -- snacks dashboard
     Group.new("SnacksDashboardHeader", colors.b_green_dk_01, colors.none, styles.bold)
     Group.new("SnacksDashboardTitle", colors.b_green, colors.none, styles.bold)
     Group.new("SnacksDashboardIcon", colors.b_green_dk_01, colors.none, styles.none)
     Group.new("SnacksDashboardDesc", colors.b_blue_lt_01, colors.none, styles.none)
     Group.new("SnacksDashboardKey", colors.s_grey, colors.none, styles.none)
-    -- bufferline
-    Group.new("bufferlineIndicatorSelected", colors.b_orange, colors.none, styles.none)
-    Group.new("BufferLineSeparator", colors.s_pink, colors.none, styles.none)
-    Group.new("BufferlineIndicatorSelected", colors.b_yellow, colors.none, styles.none)
-    Group.new("BufferLineTruncMarker", colors.b_white, colors.s_pink, styles.none)
-    Group.new("BufferLineModified", colors.t_green, colors.none, styles.none)
-    Group.new("BufferLineBufferSelected", colors.s_pink, colors.none, styles.bold)
   end
 
   -- noice
@@ -732,11 +595,11 @@ function M.set_colors()
 
   Group.new("NoiceFormatProgressDone", colors.b_green, colors.b_green_lt_05, styles.None)
 
-  -- snacks
+  -- snacks notifier
   Group.new("SnacksNotifierBorderInfo", colors.b_green_lt_02, colors.none, styles.none)
   Group.new("SnacksNotifierTitleInfo", colors.b_green_lt_02, colors.none, styles.none)
 
-  -- render
+  -- render markdown
   Group.new("RenderMarkdownCode", colors.none, colors.b_white, styles.none)
   Group.new("RenderMarkdownH3Bg", colors.t_grey, colors.s_grey_lt_02, styles.None)
   Group.new("@markup.strong.markdown_inline", colors.b_black, colors.none, styles.bold)
@@ -744,12 +607,6 @@ function M.set_colors()
 
   -- Dark mode
   if config.auto_mode == "Dark" then
-    -- noice
-    Group.new("NoiceCmdlineIconLua", colors.b_blue_lt_01, colors.none, styles.none)
-    Group.new("NoiceCmdlineIconSearch", colors.b_red, colors.none, styles.none)
-    Group.new("NoiceCmdlineIconCmdline", colors.b_green, colors.none, styles.none)
-    Group.new("NoiceCmdlineIconFilter", colors.b_orange, colors.none, styles.none)
-    Group.new("NoiceCmdlineIconHelp", colors.b_orange, colors.none, styles.none)
     Group.new("ErrorMsg", colors.b_red, colors.none, styles.none)
 
     -- snacks - indent
@@ -764,11 +621,7 @@ function M.set_colors()
 
     -- render
     Group.new("RenderMarkdownCode", colors.none, colors.b_black, styles.none)
-    -- Group.new("RenderMarkdownCodeBullet", colors.none, colors.b_black, styles.none)
-    -- Group.new("RenderMarkdown_bgtofg_RenderMarkdownCode", colors.none, colors.b_black, styles.none)
 
-    -- nvim
-    -- Group.new("Visual", colors.none, colors.b_orange:light():light():light():light(), styles.none)
     -- popmenu
     Group.new("NormalFloat", colors.none, colors.none, styles.none)
     -- pmenu
@@ -776,10 +629,8 @@ function M.set_colors()
     Group.new("PmenuSel", colors.s_green, colors.none, styles.bold)
     Group.new("PmenuThumb", colors.t_grey, colors.s_grey, styles.None)
     -- search
-    Group.new("IncSearch", colors.b_black, colors.b_red, styles.None)
     Group.new("Search", colors.b_yellow, colors.b_black, styles.undercurl)
-    -- Group.new("CurSearch", colors.noen, colors.b_yellow, styles.None)
-    --  visual
+    -- visual
     Group.new("Visual", colors.none, colors.b_black_lt_02, styles.none)
     -- lualine
     Group.new("LuaLineNormalA", colors.b_black_lt_01, colors.b_blue, styles.bold)
@@ -794,13 +645,6 @@ function M.set_colors()
 
     Group.new("LuaLineInactiveA", colors.b_black, colors.b_grey, styles.bold)
 
-    -- noice
-    --
-    -- Group.new("NoiceCmdlineIconSearch", colors.b_black, colors.b_red, styles.bold)
-    -- Group.new("NoiceCmdlineIconCmdline", colors.b_black, colors.b_green, styles.bold)
-    -- Group.new("NoiceCmdlineIconFilter", colors.b_black, colors.b_orange, styles.bold)
-    -- Group.new("NoiceCmdlineIconHelp", colors.b_black, colors.b_orange, styles.bold)
-
     -- git diff
     Group.new("DiffAdd", colors.b_green, colors.none, styles.none)
     Group.new("DiffChange", colors.b_yellow, colors.none, styles.none)
@@ -811,47 +655,13 @@ function M.set_colors()
 
     Group.new("IncSearch", colors.b_red, colors.none, styles.none)
     Group.new("CurSearch", colors.b_red, colors.none, styles.None)
-    -- Group.new("FzfLuaScrollFloatFull", colors.b_red, colors.none, styles.None)
 
     -- diagnostic
     Group.new("Warning", colors.b_yellow_dk_06)
     Group.new("DiagnosticSignWarn", colors.b_yellow_dk_06, colors.none, styles.bold)
 
     -- tabline
-    Group.new("TabLineSep4", colors.b_blue, colors.black, styles.reverse) -- left separator
-  end
-
-  function M.translate(group)
-    if fn.has("nvim-0.6.0") == 0 then
-      return group
-    end
-
-    if not string.match(group, "^LspDiagnostics") then
-      return group
-    end
-
-    local translated = group
-    translated = string.gsub(translated, "^LspDiagnosticsDefault", "Diagnostic")
-    translated = string.gsub(translated, "^LspDiagnostics", "Diagnostic")
-    translated = string.gsub(translated, "Warning$", "Warn")
-    translated = string.gsub(translated, "Information$", "Info")
-    return translated
-  end
-
-  local lspColors = {
-    Error = groups.Error,
-    Warning = groups.Warning,
-    Information = groups.Information,
-    Hint = groups.Hint,
-  }
-  for _, lsp in pairs({ "Error", "Warning", "Information", "Hint" }) do
-    local lspGroup = Group.new(M.translate("LspDiagnosticsDefault" .. lsp), lspColors[lsp])
-    Group.link(M.translate("LspDiagnosticsVirtualText" .. lsp), lspGroup)
-    Group.new(M.translate("LspDiagnosticsUnderline" .. lsp), colors.none, colors.none, styles.undercurl, lspColors[lsp])
-  end
-
-  for _, name in pairs({ "LspReferenceText", "LspReferenceRead", "LspReferenceWrite" }) do
-    Group.link(M.translate(name), groups.CursorLine)
+    Group.new("TabLineSep4", colors.b_blue, colors.black, styles.reverse)
   end
 end
 
