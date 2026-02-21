@@ -659,9 +659,10 @@ function M.set_colors()
     -- diagnostic
     Group.new("Warning", colors.b_yellow_dk_06)
     Group.new("DiagnosticSignWarn", colors.b_yellow_dk_06, colors.none, styles.bold)
-
+    Group.new("DiagnosticVirtualTextWarn", colors.b_yellow_dk_06, colors.none, styles.bold)
     -- tabline
     Group.new("TabLineSep4", colors.b_blue, colors.black, styles.reverse)
+    Group.new("RenderMarkdownH3Bg", colors.b_black_lt_02, colors.none, styles.None)
   end
 end
 
