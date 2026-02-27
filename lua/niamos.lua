@@ -6,6 +6,7 @@ local config = {
   background_set = false,
   background_color = require("colorbuddy.init").Color.none,
   auto_mode = "light",
+  theme = "niamos",
 }
 
 local M = {
@@ -101,6 +102,42 @@ function M.set_colors()
   Color.new("t_green", "#87c095")
   Color.new("t_grey_lt_01", "#667375")
   Color.new("t_grey", "#4e585a")
+
+  -- Flat UI light palette
+  Color.new("fl_keyword", "#05ad97")
+  Color.new("fl_function", "#8d12ba")
+  Color.new("fl_support_fn", "#7b10a2")
+  Color.new("fl_string", "#3d9ca9")
+  Color.new("fl_comment", "#555555")
+  Color.new("fl_variable", "#4d4d4d")
+  Color.new("fl_parameter", "#E04528")
+  Color.new("fl_type", "#D10771")
+  Color.new("fl_number", "#cc5200")
+  Color.new("fl_constant", "#D43C47")
+  Color.new("fl_constant_user", "#d37612")
+  Color.new("fl_storage", "#cc4a33")
+  Color.new("fl_operator", "#4d4d4d")
+  Color.new("fl_property", "#964bb4")
+  Color.new("fl_tag", "#0f8ebd")
+  Color.new("fl_attribute", "#b017e8")
+  Color.new("fl_namespace", "#1292E3")
+  Color.new("fl_support_type", "#3396cc")
+
+  -- Flat UI dark palette
+  Color.new("fld_keyword", "#e06c75")
+  Color.new("fld_function", "#3193c6")
+  Color.new("fld_support_fn", "#56b6c2")
+  Color.new("fld_string", "#05ad97")
+  Color.new("fld_comment", "#5c6370")
+  Color.new("fld_variable", "#d0d0d0")
+  Color.new("fld_variable_lang", "#05ad97")
+  Color.new("fld_parameter", "#A6B2C0")
+  Color.new("fld_type", "#e5c07b")
+  Color.new("fld_number", "#d19a66")
+  Color.new("fld_storage", "#c678dd")
+  Color.new("fld_operator", "#abb2bf")
+  Color.new("fld_class", "#61afef")
+  Color.new("fld_tag", "#e06c75")
 
   Group.new("Warning", colors.yellow)
   Group.new("Information", colors.blue)
@@ -605,6 +642,42 @@ function M.set_colors()
   Group.new("@markup.strong.markdown_inline", colors.b_black, colors.none, styles.bold)
   Group.new("@markup.heading.markdown", colors.b_red, colors.none, styles.bold)
 
+  -- Flat UI light syntax overrides
+  if config.theme == "niamos_flatui" then
+    Group.new("Comment", colors.fl_comment, colors.none, styles.italic)
+    Group.new("Constant", colors.fl_constant)
+    Group.new("Identifier", colors.fl_property, colors.none, styles.none)
+    Group.new("Statement", colors.fl_keyword, colors.none, styles.none)
+    Group.new("pythonBuiltin", colors.fl_support_fn, colors.none, styles.none)
+    Group.new("PreProc", colors.fl_storage, colors.none, styles.none)
+    Group.new("Type", colors.fl_type)
+    Group.new("Special", colors.fl_parameter, colors.none, styles.none)
+    Group.new("Function", colors.fl_function, colors.none, styles.none)
+    Group.new("Delimiter", colors.fl_operator, colors.none, styles.none)
+    Group.new("Conditional", colors.fl_keyword, colors.none, styles.none)
+    Group.new("Operator", colors.fl_operator, colors.none, styles.none)
+    Group.new("Character", colors.fl_string, colors.none, styles.none)
+    Group.new("Number", colors.fl_number, colors.none, styles.none)
+    Group.new("String", colors.fl_string, colors.none, styles.none)
+    Group.new("@tag", colors.fl_tag)
+    Group.new("@tag.attribute", colors.fl_attribute)
+    Group.new("@constructor", colors.fl_type, colors.none, styles.none)
+    Group.new("@parameter", colors.fl_parameter, colors.none, styles.none)
+    Group.new("@attribute", colors.fl_attribute, colors.none, styles.none)
+    Group.new("@field", colors.fl_property, colors.none, styles.none)
+    Group.new("@property", colors.fl_property, colors.none, styles.none)
+    Group.new("@variable", colors.fl_variable, colors.none, styles.none)
+    Group.new("@variable.builtin", colors.fl_keyword, colors.none, styles.bold)
+    Group.new("@variable.parameter.builtin", colors.fl_parameter, colors.none, styles.bold)
+    Group.new("@variable.parameter", colors.fl_parameter, colors.none, styles.none)
+    Group.new("@variable.parameter.python", colors.fl_parameter, colors.none, styles.none)
+    Group.new("cType", colors.fl_type, colors.none, styles.none)
+    Group.new("cTypedef", colors.fl_keyword, colors.none, styles.none)
+    Group.new("cStructure", colors.fl_storage, colors.none, styles.none)
+    Group.new("@constant", colors.fl_constant_user, colors.none, styles.none)
+    Group.new("@namespace", colors.fl_namespace, colors.none, styles.none)
+  end
+
   -- Dark mode
   if config.auto_mode == "Dark" then
     Group.new("ErrorMsg", colors.b_red, colors.none, styles.none)
@@ -663,6 +736,31 @@ function M.set_colors()
     -- tabline
     Group.new("TabLineSep4", colors.b_blue, colors.black, styles.reverse)
     Group.new("RenderMarkdownH3Bg", colors.b_black_lt_02, colors.none, styles.None)
+
+    -- Flat UI dark syntax overrides
+    if config.theme == "niamos_flatui" then
+      Group.new("Comment", colors.fld_comment, colors.none, styles.italic)
+      Group.new("Statement", colors.fld_keyword, colors.none, styles.none)
+      Group.new("Function", colors.fld_function, colors.none, styles.none)
+      Group.new("String", colors.fld_string, colors.none, styles.none)
+      Group.new("Character", colors.fld_string, colors.none, styles.none)
+      Group.new("Type", colors.fld_type)
+      Group.new("Number", colors.fld_number, colors.none, styles.none)
+      Group.new("Constant", colors.fld_number)
+      Group.new("Operator", colors.fld_operator, colors.none, styles.none)
+      Group.new("Identifier", colors.fld_variable, colors.none, styles.none)
+      Group.new("PreProc", colors.fld_storage, colors.none, styles.none)
+      Group.new("Special", colors.fld_parameter, colors.none, styles.none)
+      Group.new("Delimiter", colors.fld_operator, colors.none, styles.none)
+      Group.new("Conditional", colors.fld_keyword, colors.none, styles.none)
+      Group.new("pythonBuiltin", colors.fld_support_fn, colors.none, styles.none)
+      Group.new("@variable", colors.fld_variable, colors.none, styles.none)
+      Group.new("@variable.builtin", colors.fld_variable_lang, colors.none, styles.bold)
+      Group.new("@variable.parameter", colors.fld_parameter, colors.none, styles.none)
+      Group.new("@variable.parameter.python", colors.fld_parameter, colors.none, styles.none)
+      Group.new("@constant", colors.fld_number, colors.none, styles.none)
+      Group.new("cType", colors.fld_type, colors.none, styles.none)
+    end
   end
 end
 
